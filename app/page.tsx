@@ -1,113 +1,139 @@
+"use client";
+import FixedAdvertTop from "@/components/custom/FixedAdvertTop";
 import Image from "next/image";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Facebook,
+  Instagram,
+  Search,
+  ShoppingBagIcon,
+  Twitter,
+} from "lucide-react";
+import world from "@/lib/icons/icons8-world-100.png";
+import skin from "@/lib/icons/icons8-skin-64.png";
+import face from "@/lib/icons/icons8-smile-100.png";
+import ItemCard from "@/components/custom/itemcard";
+import FaButton from "@/components/custom/corebutton";
+import Header from "@/components/custom/header";
+import CoreButton from "@/components/custom/corebutton";
+import { FlipWords } from "@/components/ace/flip-word";
+import { easeOut, motion } from "framer-motion";
+import { Leaf, Flower, Vegan } from "lucide-react";
+import PreLoader from "@/components/custom/pre-loader";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className=" relative font-poppins w-full min-h-screen">
+      <PreLoader />
+      <div className=" w-full h-screen relative">
+        <Image
+          src={
+            "https://static.wixstatic.com/media/84770f_7e1fd038ec794adca3177c99916bd044~mv2.jpg/v1/fill/w_1208,h_576,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/Final-image.jpg"
+          }
+          fill
+          alt=""
+          className=" -z-10"
+          style={{ objectPosition: "center", objectFit: "cover" }}
+        />
+        <div className=" w-[90%] space-y-4 h-full flex-col flex justify-center mx-auto text-white">
+          <p className=" text-xl text-gray-200">
+            MOISTURE + DEFINITION + CURL FORMATION
+          </p>
+          <h1 className=" text-gray-100 font-melodrama max-w-[40%] text-[50px] font-[500]">
+            Hydration that holds. Beauty that lasts.
+          </h1>
+          <p className=" text-lg">Deep hydration for textured hair.</p>
+          <CoreButton>
+            <p>SHOP NOW</p>
+          </CoreButton>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className=" w-[50%] gap-x-12 my-[90px] mx-auto grid grid-cols-3">
+        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
+          <Leaf size={32} />
+          <p className=" text-black">All-natural ingridients</p>
+        </div>
+        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
+          <Flower size={32} />
+          <p className=" text-black">Delicately scented</p>
+        </div>
+        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
+          <Leaf size={32} />
+          <p className=" text-black">Vegan Friendly</p>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className=" w-[90%] mx-auto mb-[90px]">
+        <h1 className=" text-center font-melodrama text-[50px] mb-10 ">
+          Best Sellers
+        </h1>
+        <div className=" w-full grid grid-cols-3">
+          {[1, 2, 3].map((item, index) => {
+            return <ItemCard key={item} />;
+          })}
+        </div>
       </div>
-    </main>
+      <div className=" h-[60vh] w-full mb-[90px] grid grid-cols-2">
+        <div className=" space-y-4 bg-foralwhite h-full relative flex flex-col  justify-center p-10 ">
+          <Image
+            src={
+              "https://assets.website-files.com/63d0c06097974d7738bb5468/63f83ba903ce1c1d09aa81b8_shape-3.svg"
+            }
+            alt=""
+            width={200}
+            height={200}
+            className=" absolute top-0 left-0"
+          />
+          <h1 className=" text-[30px] font-melodrama">
+            Welcome to Core Radiance: The Heart of Deep Hydration for Textured
+            Hair
+          </h1>
+          <p className=" text-lg">
+            Immerse yourself in our world of all-natural haircare, where every
+            product enriched with organic extracts, vitamins, and antioxidants,
+            is specifically designed to nourish, strengthen, and hydrate. Core
+            Radiance is more than just haircare – it represents a holistic
+            approach to hair health, helping you achieve and maintain lustrous,
+            vibrant curls, waves, and coils. Join us in celebrating the
+            transformative power of deep hydration and natural ingredients, and
+            experience the vibrant, lustrous beauty of your hair.
+          </p>
+          <br />
+          <CoreButton>
+            <p>OUR STORY</p>
+          </CoreButton>
+        </div>
+        <div className=" h-full relative">
+          <Image
+            src={
+              "https://static.wixstatic.com/media/84770f_7e1fd038ec794adca3177c99916bd044~mv2.jpg/v1/fill/w_1208,h_576,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/Final-image.jpg"
+            }
+            fill
+            alt=""
+            className=" -z-10"
+            style={{ objectPosition: "center", objectFit: "cover" }}
+          />
+        </div>
+      </div>
+      <div className=" w-full h-[90vh]">
+        <div className=" w-full h-[80vh] relative">
+          <Image
+            src={
+              "https://source.unsplash.com/green-vegetable-beside-ceramic-bowl-kXQ3J7_2fpc"
+            }
+            fill
+            alt=""
+            className=" -z-10"
+            style={{ objectPosition: "center", objectFit: "cover" }}
+          />
+          <div className=" w-full h-full bg-gradient-to-b from-[#c79816cf] from-10% to-[90%] pt-5  to-transparent">
+            <h1 className=" text-center text-[50px] max-w-[50%] mx-auto text-white font-melodrama">
+              All-Natural, All-Effective: Better for Your Hair, Better for the
+              Planet
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

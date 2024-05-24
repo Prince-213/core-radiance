@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { Poppins as PopSans } from "next/font/google";
+import { cn } from "@/lib/utils";
+import "./globals.css";
+import Header from "@/components/custom/header";
+import Footer from "@/components/custom/footer";
+
+const popSans = PopSans({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin", "latin-ext"],
+  variable: "--pop-sans",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +24,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen relative font-poppins bg-background  antialiased"
+        )}
+      >
+        <div className=" font-medium text-center z-50 bg-white  p-2 text-lg flex flex-col items-center justify-center right-5 bottom-5 fixed w-[6rem] h-[6rem] rounded-full">
+          <p>Get</p>
+          <p className=" text-center text-pretty">20% Off</p>
+        </div>
+        <div className=" w-full ">
+          <Header />
+        </div>
+
+        {children}
+
+        <div className=" w-full">
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
