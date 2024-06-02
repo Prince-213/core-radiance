@@ -87,7 +87,7 @@ const SaloonProducts = () => {
             </button>
           </div>
           <SlideView delay={0.2}>
-            <h3 className=" text-gray-200 text-center w-[80%] mx-auto text-lg">
+            <h3 className=" text-gray-200 text-pretty text-center w-[80%] mx-auto text-lg">
               While choosing the right shampoo and conditioner is essential for
               maintaining the health of your hair and scalp, the role of
               high-quality haircare tools is equally crucial. Consider the
