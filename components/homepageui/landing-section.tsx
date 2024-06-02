@@ -11,7 +11,14 @@ import image2 from "@/lib/images/content-pixie-TxBQ7yLj6JU-unsplash (1).jpg";
 import image3 from "@/lib/images/elsa-olofsson-Pm0K9Y3EPUc-unsplash.jpg";
 
 import { easeOut, motion, stagger } from "framer-motion";
-import { Leaf, Flower, Vegan, ChevronUp, ChevronDown } from "lucide-react";
+import {
+  Leaf,
+  Flower,
+  Vegan,
+  ChevronUp,
+  ChevronDown,
+  Circle,
+} from "lucide-react";
 import PreLoader from "@/components/custom/pre-loader";
 
 import { useState } from "react";
@@ -95,10 +102,10 @@ const LandingSection = () => {
       </motion.div>
       <div className=" absolute flex flex-col space-y-4 bottom-[40%] right-5">
         <button onClick={() => setHeroSlide(0)}>
-          <ChevronUp />
+          <Circle />
         </button>
         <button onClick={() => setHeroSlide(100)}>
-          <ChevronDown />
+          <Circle fill="black" />
         </button>
       </div>
     </main>
