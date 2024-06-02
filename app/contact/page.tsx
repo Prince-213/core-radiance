@@ -37,7 +37,7 @@ const Contact = () => {
             className=" w-full text-black h-16 outline-darkslategreen px-4 bg-foralwhite"
             placeholder="Name"
           ></input>
-          <FaButton style="100%">
+          <FaButton>
             <p>Submit</p>
           </FaButton>
         </div>
