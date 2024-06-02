@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.7",
+    "@studio-freight/react-lenis": "^0.0.47",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.4",
