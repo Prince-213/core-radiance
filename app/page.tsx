@@ -1,69 +1,41 @@
 "use client";
-import FixedAdvertTop from "@/components/custom/FixedAdvertTop";
+
 import Image from "next/image";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Facebook,
-  Instagram,
-  Search,
-  ShoppingBagIcon,
-  Twitter,
-} from "lucide-react";
-import world from "@/lib/icons/icons8-world-100.png";
-import skin from "@/lib/icons/icons8-skin-64.png";
-import face from "@/lib/icons/icons8-smile-100.png";
+
 import ItemCard from "@/components/custom/itemcard";
-import FaButton from "@/components/custom/corebutton";
-import Header from "@/components/custom/header";
+
 import CoreButton from "@/components/custom/corebutton";
-import { FlipWords } from "@/components/ace/flip-word";
-import { easeOut, motion } from "framer-motion";
-import { Leaf, Flower, Vegan } from "lucide-react";
+
+import image1 from "@/lib/images/fleur-kaan-w4Dj3MshHQ0-unsplash (1).jpg";
+import image2 from "@/lib/images/content-pixie-TxBQ7yLj6JU-unsplash (1).jpg";
+import image3 from "@/lib/images/elsa-olofsson-Pm0K9Y3EPUc-unsplash.jpg";
+
+import { easeOut, motion, stagger } from "framer-motion";
+import { Leaf, Flower, Vegan, ChevronUp, ChevronDown } from "lucide-react";
 import PreLoader from "@/components/custom/pre-loader";
+
+import { useState } from "react";
+import clsx from "clsx";
+import LandingSection from "@/components/homepageui/landing-section";
+import CategorySection from "@/components/homepageui/category-section";
+import BestSeller from "@/components/homepageui/best-seller";
+import SaloonProducts from "@/components/homepageui/products";
+import Testimonial from "@/components/homepageui/testimonial";
+import Briefing from "@/components/homepageui/content";
+import Social from "@/components/homepageui/social";
 
 export default function Home() {
   return (
     <div className=" relative font-poppins w-full min-h-screen">
       <PreLoader />
-      <div className=" w-full h-screen relative">
-        <Image
-          src={
-            "https://static.wixstatic.com/media/84770f_7e1fd038ec794adca3177c99916bd044~mv2.jpg/v1/fill/w_1208,h_576,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/Final-image.jpg"
-          }
-          fill
-          alt=""
-          className=" -z-10"
-          style={{ objectPosition: "center", objectFit: "cover" }}
-        />
-        <div className=" w-[90%] space-y-4 h-full flex-col flex justify-center mx-auto text-white">
-          <p className=" text-xl text-gray-200">
-            MOISTURE + DEFINITION + CURL FORMATION
-          </p>
-          <h1 className=" text-gray-100 font-melodrama max-w-[40%] text-[50px] font-[500]">
-            Hydration that holds. Beauty that lasts.
-          </h1>
-          <p className=" text-lg">Deep hydration for textured hair.</p>
-          <CoreButton>
-            <p>SHOP NOW</p>
-          </CoreButton>
-        </div>
-      </div>
-      <div className=" w-[50%] gap-x-12 my-[90px] mx-auto grid grid-cols-3">
-        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
-          <Leaf size={32} />
-          <p className=" text-black">All-natural ingridients</p>
-        </div>
-        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
-          <Flower size={32} />
-          <p className=" text-black">Delicately scented</p>
-        </div>
-        <div className=" w-full flex flex-col space-y-4 items-center space-x-5 text-coregold text-xl font-[500]">
-          <Leaf size={32} />
-          <p className=" text-black">Vegan Friendly</p>
-        </div>
-      </div>
-      <div className=" w-[90%] mx-auto mb-[90px]">
+      <LandingSection />
+      <CategorySection />
+      <BestSeller />
+      <SaloonProducts />
+      <Testimonial />
+      <Briefing />
+      <Social />
+      {/* <div className=" w-[90%] mx-auto mb-[90px]">
         <h1 className=" text-center font-melodrama text-[50px] mb-10 ">
           Best Sellers
         </h1>
@@ -133,7 +105,7 @@ export default function Home() {
             </h1>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

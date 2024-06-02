@@ -76,4 +76,14 @@
     body {
       @apply bg-background text-foreground;
     }
+    .grad {
+              /*
+        * Created with https://www.css-gradient.com
+        * Gradient link: https://www.css-gradient.com/?c1=9e8edb&c2=eccc9c&gt=r&gd=dcc
+        */
+        background: radial-gradient(#c7981657 10%, transparent 50%, transparent 100% );
+    }
+    .shad {
+      box-shadow: 10px gray , 10px gray, 20px gray;
+    }
   }

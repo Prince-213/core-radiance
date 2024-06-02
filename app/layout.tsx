@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
+import { ChevronUp } from "lucide-react";
+import RewardBar from "@/components/custom/reward-bar";
 
 const popSans = PopSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -29,12 +31,12 @@ export default function RootLayout({
           "min-h-screen relative font-poppins bg-background  antialiased"
         )}
       >
-        <div className=" font-medium text-center z-50 bg-white  p-2 text-lg flex flex-col items-center justify-center right-5 bottom-5 fixed w-[6rem] h-[6rem] rounded-full">
-          <p>Get</p>
-          <p className=" text-center text-pretty">20% Off</p>
-        </div>
         <div className=" w-full ">
           <Header />
+        </div>
+
+        <div className=" fixed bottom-0 z-50 w-full">
+          <RewardBar />
         </div>
 
         {children}

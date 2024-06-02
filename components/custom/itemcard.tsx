@@ -1,52 +1,43 @@
-import React from "react";
+import shampoo from "@/lib/images/pngwing.com.png";
+import { Star } from "lucide-react";
 import Image from "next/image";
-import FaButton from "./corebutton";
-import CoreButton from "./corebutton";
+import nat from "@/lib/images/nataliya-melnychuk-tnWjbdPmk1M-unsplash.jpg";
 
 const ItemCard = () => {
   return (
-    <div className=" group">
-      <div className=" w-full h-[40vh] relative">
+    <div className=" w-full group relative overflow-hidden h-full bg-[#f4f4f4] rounded-xl">
+      <div className=" absolute top-0 z-10 left-0 w-full flex items-start justify-between">
+        <div className=" p-2 bg-gray-200 rounded-br-xl  text-black uppercase text-sm font-medium w-fit">
+          best seller
+        </div>
+        <div className=" p-2">
+          <div className=" flex items-center space-x-2">
+            <Star size={24} />
+            <Star size={24} />
+            <Star size={24} />
+            <Star size={24} />
+            <Star size={24} />
+          </div>
+        </div>
+      </div>
+      <div className=" justify-center flex flex-col relative items-center h-[75%] ">
+        <Image width={500} height={500} className="  " alt="" src={shampoo} />
         <Image
-          className=" transition-all delay-100 duration-200 ease-in-out "
-          src={
-            "https://mycoreradiance.com/cdn/shop/files/conditioner_6229bd30-a5f9-4043-88da-96a3121feda4.jpg?v=1683806678&width=540"
-          }
           fill
+          className=" opacity-0 group-hover:opacity-100 transition-all duration-150 ease-in object-cover object-center  "
           alt=""
-          style={{
-            objectFit: "contain",
-            width: "100%",
-            height: "100%",
-            objectPosition: "center",
-          }}
-        />
-        <Image
-          className=" opacity-0 group-hover:opacity-100 absolute transition-all delay-100 duration-200 ease-in-out "
-          src={"https://source.unsplash.com/votive-candle-r40EYKVyutI"}
-          fill
-          alt=""
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            height: "100%",
-            objectPosition: "center",
-          }}
+          src={nat}
         />
       </div>
-      <div className=" py-5 space-y-5 flex flex-col items-center">
-        <h1 className=" text-center text-[20px]">Alpha Arbutin & Vitamin C</h1>
-        <div className=" flex flex-col items-center">
-          <h1 className=" text-darkslategreen text-[30px] text-center font-melodrama">
-            $ 120.00 USD
-          </h1>
-          <del className=" text-darkslategreen text-lg text-center font-melodrama">
-            $ 209.00 USD
-          </del>
+      <div className=" h-[25%] justify-between pt-5 flex flex-col items-center">
+        <div className=" text-center">
+          <p className=" uppercase text-sm font-medium">moisture lock</p>
+          <h2 className=" text-lg font-medium my-1">Leave-In Conditioner</h2>
+          <p>$10 - $70</p>
         </div>
-        <CoreButton>
-          <p>Shop Now</p>
-        </CoreButton>
+        <button className=" bg-red-400 text-white font-medium text-lg text-center w-full py-4">
+          Quick Add
+        </button>
       </div>
     </div>
   );

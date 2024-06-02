@@ -7,8 +7,8 @@ import { motion } from "framer-motion";
 const CoreButton = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.button
-      whileHover={{ backgroundColor: "#000", transition: { duration: 0.6 } }}
-      className=" bg-coregold text-white text-lg max-w-[10rem] min-w-fit py-2 px-4"
+      whileHover={{ backgroundColor: "#000", transition: { duration: 0.2 } }}
+      className=" bg-red-400 text-white text-lg max-w-[10rem] min-w-fit py-2 px-4 rounded-md"
     >
       {children}
     </motion.button>
