@@ -211,14 +211,14 @@ const Testimonial = () => {
           </div>
           <SlideView delay={0.1}>
             <h1 className=" text-5xl leading-normal font-semibold font-melodrama">
-              "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              ullam aperiam impedit. Quis at enim doloremque facere."
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+              ullam aperiam impedit. Quis at enim doloremque facere.
             </h1>
           </SlideView>
 
           <SlideView delay={0.2}>
             <h3 className=" text-black uppercase font-semibold text-left mx-auto text-lg">
-              jessica o'brien
+              {"jessica o'brien"}
             </h3>
             <p className=" uppercase">coreradiance stylist</p>
           </SlideView>

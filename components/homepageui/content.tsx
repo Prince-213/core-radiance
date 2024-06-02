@@ -14,7 +14,7 @@ const Briefing = () => {
             </h1>
           </div>
           <h1 className=" font-melodrama text-6xl text-white font-semibold max-w-[80%]">
-            We're sylist created salon perfected and curl approved.
+            {" We're sylist created salon perfected and curl approved."}
           </h1>
         </div>
       </div>
