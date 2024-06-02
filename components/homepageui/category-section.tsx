@@ -35,7 +35,7 @@ const CategorySection = () => {
       initial={{ backgroundColor: "#CDE3E0" }}
       animate={{ backgroundColor: content[category / 100].color }}
       transition={{ duration: 0.2, ease: "circIn" }}
-      className=" py-20 w-full h-screen "
+      className=" py-20 w-full h-[90vh] "
     >
       <div className=" w-[90%] h-full mx-auto flex items-center justify-between">
         <div className=" w-[45%] h-full overflow-hidden">

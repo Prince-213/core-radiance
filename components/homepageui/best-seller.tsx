@@ -30,7 +30,7 @@ const content = [
 
 const BestSeller = () => {
   return (
-    <div className=" w-full h-screen py-20">
+    <div className=" w-full h-[90vh] py-20">
       <div className=" w-[90%] gap-x-10 h-full mx-auto grid grid-cols-3">
         {content.map((item, index) => {
           return <ItemCard key={index} item={item} />;

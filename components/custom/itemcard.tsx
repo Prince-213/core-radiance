@@ -2,7 +2,7 @@ import shampoo from "@/lib/images/pngwing.com.png";
 import { Star } from "lucide-react";
 import Image from "next/image";
 import nat from "@/lib/images/nataliya-melnychuk-tnWjbdPmk1M-unsplash.jpg";
-
+import star from "@/lib/images/icons8-star-64.png";
 
 interface Item {
   name: string;
@@ -11,18 +11,18 @@ interface Item {
 }
 const ItemCard = ({ item }: { item: Item }) => {
   return (
-    <div className=" w-full group relative overflow-hidden h-[90%] bg-[#ffffffb4] rounded-xl ">
+    <div className=" w-full group relative overflow-hidden h-full bg-[#ffffffb4] rounded-xl ">
       <div className=" absolute top-0 z-10 left-0 w-full flex items-start justify-between">
         <div className=" p-2 bg-gray-200 rounded-br-xl  text-black uppercase text-sm font-medium w-fit">
           best seller
         </div>
         <div className=" p-2">
           <div className=" flex items-center space-x-2">
-            <Star size={24} />
-            <Star size={24} />
-            <Star size={24} />
-            <Star size={24} />
-            <Star size={24} />
+            <Image src={star} width={20} height={20} alt="" />
+            <Image src={star} width={20} height={20} alt="" />
+            <Image src={star} width={20} height={20} alt="" />
+            <Image src={star} width={20} height={20} alt="" />
+            <Image src={star} width={20} height={20} alt="" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const ItemCard = ({ item }: { item: Item }) => {
 
           <p>{item.price}</p>
         </div>
-        <button className=" bg-red-400 text-white font-medium text-lg text-center w-full py-4">
+        <button className=" opacity-0 group-hover:opacity-100 transition-all duration-150 ease-in hover:bg-black bg-red-400 text-white font-medium text-lg text-center w-full py-4">
           Quick Add
         </button>
       </div>

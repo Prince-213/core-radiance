@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Briefing = () => {
   return (
-    <div className=" w-full h-screen bg-gradient-to-b from-transparent to-black relative">
+    <div className=" w-full h-[90vh] bg-gradient-to-b from-transparent to-black relative">
       <Image src={back} fill alt="" className=" object-cover object-left " />
       <div className=" w-full h-full absolute top-0 left-0 bg-gradient-to-b z-30 py-20 from-transparent to-black">
         <div className=" w-[90%] flex flex-col justify-between mx-auto h-full">

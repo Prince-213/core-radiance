@@ -43,7 +43,7 @@ const Testimonial = () => {
   };
 
   return (
-    <motion.div className=" py-20 w-[100vw] overflow-hidden mb-20 h-screen ">
+    <motion.div className=" py-20 w-[100vw] overflow-hidden mb-20 h-[90vh] ">
       <div className=" w-[300vw] h-screen overflow-scroll flex">
         {content.map((item, index) => {
           return (
