@@ -7,6 +7,7 @@ import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
 import { ChevronUp } from "lucide-react";
 import RewardBar from "@/components/custom/reward-bar";
+import SmoothScrolling from "@/components/custom/smoothscroll";
 
 const popSans = PopSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -26,25 +27,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen relative font-poppins bg-background  antialiased"
-        )}
-      >
-        <div className=" w-full ">
-          <Header />
-        </div>
+      <SmoothScrolling>
+        <body
+          className={cn(
+            "min-h-screen relative font-poppins bg-background  antialiased"
+          )}
+        >
+          <div className=" w-full ">
+            <Header />
+          </div>
 
-        <div className=" fixed bottom-0 z-50 w-full">
-          <RewardBar />
-        </div>
+          <div className=" fixed bottom-0 z-50 w-full">
+            <RewardBar />
+          </div>
 
-        {children}
+          {children}
 
-        <div className=" w-full">
-          <Footer />
-        </div>
-      </body>
+          <div className=" w-full">
+            <Footer />
+          </div>
+        </body>
+      </SmoothScrolling>
     </html>
   );
 }
