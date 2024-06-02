@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import image1 from "@/lib/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg";
+import image1 from "@/lib/images/shampoo.jpg";
 import image2 from "@/lib/images/aiony-haust-3TLl_97HNJo-unsplash.jpg";
 import image3 from "@/lib/images/olamide-gabriel-o5C-KDbZHww-unsplash.jpg";
 import Image from "next/image";
@@ -8,221 +8,88 @@ import shampoo from "@/lib/images/pngwing.com.png";
 import SlideView from "../custom/SlideInView";
 import { color, motion } from "framer-motion";
 import { Star } from "lucide-react";
+import star from "@/lib/images/icons8-star-64.png";
+import { TextGenerateEffect } from "../custom/text-generate-effect";
+import Typewriter from "../custom/lazyload";
+import LazyRenderComponent from "../custom/lazyload";
 
 const Testimonial = () => {
   const [category, setCategory] = useState(0);
 
   const content = [
     {
-      index: 0,
-      descp:
-        " curls Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
-      color: "#CDE3E0",
+      name: "Linnea K.",
+      city: "Stockholm",
+      comment:
+        "I have tried some other brands (mostly due to less expensive) but nothing could measure with your products. They are by far the best for my daughers 😍",
     },
     {
-      index: 100,
-      descp:
-        " waves Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
-      color: "#DEB18B",
+      name: "Ulrika D.",
+      city: "Stockholm",
+      comment:
+        "I like the productsl because they make my hair moist not frizzy. The leave-in is not too thick and sticky.",
     },
     {
-      index: 200,
-      descp:
-        " tight curls Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
-      color: "#C9DBE5",
+      name: "Ozturk D.",
+      city: "Stockholm",
+      comment:
+        "Wow! That's so cool. No wonder Ella's hair became fantastic from being at your place and using your products. I hope she will now get used to having someone fix her hair so that it will be nice and grow healthy. 🙏🌺 ",
     },
   ];
 
+  const value = {
+    text: "",
+    className: "",
+  };
+
   return (
-    <motion.div className=" py-20 w-full h-screen ">
-      <div className=" w-[90%] h-full mx-auto flex items-center justify-between">
-        <div className=" w-[45%] h-full overflow-hidden">
-          <motion.div
-            initial={{ y: 0 }}
-            animate={{ y: `-${category}%` }}
-            className={` w-full h-full -translate-y-[0%]`}
-          >
-            <div className=" w-full h-full  rounded-xl overflow-hidden relative">
-              <Image
-                src={image1}
-                fill
-                alt=""
-                className=" "
-                style={{ objectPosition: "center", objectFit: "cover" }}
-              />
+    <motion.div className=" py-20 w-[100vw] overflow-hidden mb-20 h-screen ">
+      <div className=" w-[300vw] h-screen overflow-scroll flex">
+        {content.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className=" w-[100vw]  h-full mx-auto flex items-center justify-between"
+            >
+              <div className=" w-[45%]  h-full overflow-hidden">
+                <motion.div className={` w-full h-full -translate-y-[0%]`}>
+                  <div className=" w-full h-full bg-red-400  rounded-xl overflow-hidden relative">
+                    <Image
+                      src={image1}
+                      fill
+                      alt=""
+                      className=" bg-no-repeat "
+                      style={{ objectPosition: "center", objectFit: "cover" }}
+                    />
+                  </div>
+                </motion.div>
+              </div>
 
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                transition={{ duration: 0.2, delay: 0.3 }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -50 },
-                }}
-                className=" z-10 absolute bottom-5"
-              >
-                <div className="flex items-center">
-                  <Image
-                    width={200}
-                    height={300}
-                    className=" z-50  "
-                    alt=""
-                    src={shampoo}
-                  />
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.2, delay: 0.5 }}
-                    variants={{
-                      visible: { opacity: 1 },
-                      hidden: { opacity: 0 },
-                    }}
-                    className=" space-y-1 w-[18rem] min-h-20 py-5  pl-10  bg-[#000000b2] text-white rounded-tr-lg rounded-br-lg -translate-x-[5.5rem]"
-                  >
-                    <span className=" uppercase font-medium text-[13px] flex items-center space-x-2">
-                      <h1 className=" font-bold mr-2">coreradiance </h1> for
-                      spiral curls
-                    </span>
-                    <h2 className=" font-semibold text-lg">
-                      Soft Defining Mousse
-                    </h2>
-                    <p className=" text-sm">$20</p>
-                  </motion.div>
+              <div className=" space-y-8 w-[55%] pr-20 h-full flex text-black flex-col items-start justify-center ">
+                <div>
+                  <p className=" uppercase font-medium">sylist recommended</p>
+                  <div className=" flex items-start space-x-2">
+                    <Image src={star} width={20} height={20} alt="" />
+                    <Image src={star} width={20} height={20} alt="" />
+                    <Image src={star} width={20} height={20} alt="" />
+                    <Image src={star} width={20} height={20} alt="" />
+                    <Image src={star} width={20} height={20} alt="" />
+                  </div>
                 </div>
-              </motion.div>
-            </div>
-            <div className=" w-full h-full  rounded-xl overflow-hidden relative">
-              <Image
-                src={image2}
-                fill
-                alt=""
-                className=" "
-                style={{ objectPosition: "center", objectFit: "cover" }}
-              />
+                <LazyRenderComponent>
+                  <TextGenerateEffect words={item.comment} />
+                </LazyRenderComponent>
 
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                transition={{ duration: 0.2, delay: 0.3 }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -50 },
-                }}
-                className=" z-10 absolute bottom-5"
-              >
-                <div className="flex items-center">
-                  <Image
-                    width={200}
-                    height={300}
-                    className=" z-50  "
-                    alt=""
-                    src={shampoo}
-                  />
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.2, delay: 0.5 }}
-                    variants={{
-                      visible: { opacity: 1 },
-                      hidden: { opacity: 0 },
-                    }}
-                    className=" space-y-1 w-[18rem] min-h-20 py-5  pl-10  bg-[#000000b2] text-white rounded-tr-lg rounded-br-lg -translate-x-[5.5rem]"
-                  >
-                    <span className=" uppercase font-medium text-[13px] flex items-center space-x-2">
-                      <h1 className=" font-bold mr-2">coreradiance </h1> for
-                      spiral curls
-                    </span>
-                    <h2 className=" font-semibold text-lg">
-                      Soft Defining Mousse
-                    </h2>
-                    <p className=" text-sm">$20</p>
-                  </motion.div>
-                </div>
-              </motion.div>
+                <SlideView delay={0.2}>
+                  <h3 className=" text-black uppercase font-semibold text-left mx-auto text-lg">
+                    {item.name}
+                  </h3>
+                  <p className=" uppercase">{item.city}</p>
+                </SlideView>
+              </div>
             </div>
-            <div className=" w-full h-full  rounded-xl overflow-hidden relative">
-              <Image
-                src={image3}
-                fill
-                alt=""
-                className=" "
-                style={{ objectPosition: "center", objectFit: "cover" }}
-              />
-
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                transition={{ duration: 0.2, delay: 0.3 }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -50 },
-                }}
-                className=" z-10 absolute bottom-5"
-              >
-                <div className="flex items-center">
-                  <Image
-                    width={200}
-                    height={300}
-                    className=" z-50  "
-                    alt=""
-                    src={shampoo}
-                  />
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.2, delay: 0.5 }}
-                    variants={{
-                      visible: { opacity: 1 },
-                      hidden: { opacity: 0 },
-                    }}
-                    className=" space-y-1 w-[18rem] min-h-20 py-5  pl-10  bg-[#000000b2] text-white rounded-tr-lg rounded-br-lg -translate-x-[5.5rem]"
-                  >
-                    <span className=" uppercase font-medium text-[13px] flex items-center space-x-2">
-                      <h1 className=" font-bold mr-2">coreradiance </h1> for
-                      spiral curls
-                    </span>
-                    <h2 className=" font-semibold text-lg">
-                      Soft Defining Mousse
-                    </h2>
-                    <p className=" text-sm">$20</p>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </div>
-          </motion.div>
-        </div>
-
-        <div className=" space-y-8 w-[50%] h-full flex text-black flex-col items-start justify-center ">
-          <div>
-            <p className=" uppercase font-medium">sylist recommended</p>
-            <div className=" flex items-start space-x-2">
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-              <Star />
-            </div>
-          </div>
-          <SlideView delay={0.1}>
-            <h1 className=" text-5xl leading-normal font-semibold font-melodrama">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-              ullam aperiam impedit. Quis at enim doloremque facere.
-            </h1>
-          </SlideView>
-
-          <SlideView delay={0.2}>
-            <h3 className=" text-black uppercase font-semibold text-left mx-auto text-lg">
-              {"jessica o'brien"}
-            </h3>
-            <p className=" uppercase">coreradiance stylist</p>
-          </SlideView>
-        </div>
+          );
+        })}
       </div>
     </motion.div>
   );

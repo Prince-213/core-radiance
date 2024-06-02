@@ -30,15 +30,21 @@ const RewardBar = () => {
             className=" w-full z-50 border-2 border-gray-200 border-b-0 rounded-tr-xl rounded-tl-xl py-6  bg-white  "
           >
             <div className=" w-[20%] space-y-4 flex flex-col mx-auto justify-center  items-center">
-              <h2>Earn 1 point for evey $1 you spend</h2>
+              <h2>Subscribe & Get 10% Off Your First Order</h2>
               <div className=" flex items-center justify-between px-6 py-3 rounded-lg border-2 border-gray-300 w-full">
-                <div>
+                {/* <div>
                   <h1 className=" font-semibold">Join Now</h1>
                   <p>Earn 30 points</p>
                 </div>
-                <ArrowRight />
+                <ArrowRight /> */}
+                <input
+                  type="email"
+                  className=" w-[80%] border-none outline-transparent"
+                  placeholder="Email"
+                />
+                <button>SUBSCRIBE</button>
               </div>
-              <span className=" flex items-center space-x-2">
+              {/*  <span className=" flex items-center space-x-2">
                 <p className=" text-gray-300 text-sm font-medium">
                   Already a member?
                 </p>
@@ -48,7 +54,7 @@ const RewardBar = () => {
                 >
                   Log In
                 </a>
-              </span>
+              </span> */}
             </div>
           </motion.div>
         )}

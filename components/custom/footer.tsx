@@ -3,71 +3,73 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className=" w-full bg-foralwhite py-[120px]">
+    <footer className=" w-full bg-foralwhite pb-[60px] pt-[120px]">
       <div className=" w-[80%] mx-auto grid grid-cols-4">
         <div className=" space-y-10">
-          <h1 className=" font-melodrama text-[30px] font-semibold">Fab</h1>
+          <h1 className=" font-melodrama text-[30px] font-semibold">
+            Here to Help
+          </h1>
           <nav className=" flex flex-col space-y-5">
             <a href="#" className=" text-base">
               Home
             </a>
             <a href="#" className=" text-base">
-              Shop All
+              About Us
             </a>
             <a href="#" className=" text-base">
-              Our Story
+              Q&A
             </a>
-            <a href="#" className=" text-base">
-              {"FAQ's"}
-            </a>
+
             <a href="#" className=" text-base">
               Contact Us
             </a>
           </nav>
         </div>
         <div className=" space-y-10">
-          <h1 className=" font-melodrama text-[30px] font-semibold">Pages</h1>
+          <h1 className=" font-melodrama text-[30px] font-semibold">
+            Terms & Policies
+          </h1>
           <nav className=" flex flex-col space-y-5">
             <a href="#" className=" text-base">
-              Licences
+              Refund Policy
             </a>
             <a href="#" className=" text-base">
               Privacy Policy
             </a>
             <a href="#" className=" text-base">
-              Terms & Conditions
+              Terms & Service
             </a>
             <a href="#" className=" text-base">
-              Forums
-            </a>
-            <a href="#" className=" text-base">
-              Changelog
+              Shipping Policy
             </a>
           </nav>
         </div>
         <div className=" space-y-10">
           <h1 className=" font-melodrama text-[30px] font-semibold">
-            Contact Us
+            Contact Info
           </h1>
           <nav className=" flex flex-col space-y-5">
-            <div className=" text-base">Have Questions or suggestions?</div>
+            <span className=" flex items-center space-x-1">
+              <p>Email:</p>
+              <a href="#" className=" text-base underline">
+                info@example.com
+              </a>
+            </span>
+
             <a href="#" className=" text-base underline">
-              info@example.com
-            </a>
-            <br />
-            <div className=" text-base">Need assistance? give us a cll</div>
-            <a href="#" className=" text-base underline">
-              +123 2345
+              Tel: +46 73 848 58 18
             </a>
           </nav>
         </div>
         <div className=" space-y-10">
           <h1 className=" font-melodrama text-[30px] font-semibold">
-            {"Wer'e here for you"}
+            Social Media
           </h1>
           <nav className=" flex flex-col space-y-5">
-            <div className=" text-base">Monday - Thursday: 9:30 - 18:00</div>
-            <p className=" text-base ">Friday: 9:30 - 15:00</p>
+            <p>
+              Core Radiance is for everyone who wants to achieve healthier and
+              more radiant hair
+            </p>
             <br />
             <div className=" flex items-center space-x-5">
               <Facebook />
@@ -77,6 +79,10 @@ const Footer = () => {
           </nav>
         </div>
       </div>
+      <br />
+      <p className=" mt-14 text-center">
+        © Core Radiance 2024 Powered by Shopify
+      </p>
     </footer>
   );
 };

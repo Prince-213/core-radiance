@@ -1,7 +1,7 @@
 import React from "react";
-import image1 from "@/lib/images/aiony-haust-3TLl_97HNJo-unsplash.jpg";
-import image2 from "@/lib/images/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg";
-import image3 from "@/lib/images/matheus-ferrero-W7b3eDUb_2I-unsplash.jpg";
+import image1 from "@/lib/images/coregirls.jpg";
+import image2 from "@/lib/images/coregirls.jpg";
+import image3 from "@/lib/images/coregirls.jpg";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
 

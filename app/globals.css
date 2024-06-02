@@ -83,7 +83,9 @@
         */
         background: radial-gradient(#c7981657 10%, transparent 50%, transparent 100% );
     }
-    .shad {
-      box-shadow: 10px gray , 10px gray, 20px gray;
+    .cust-shad {
+      box-shadow: 33px 0px 41px 0px rgba(255, 255, 255, 0.877);
+      -webkit-box-shadow: 33px 0px 41px 0px rgba(255, 255, 255, 0.68);
+      -moz-box-shadow: 33px 0px 41px 0px rgba(255, 255, 255, 0.966);
     }
   }

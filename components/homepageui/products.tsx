@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import image1 from "@/lib/images/nataliya-melnychuk-tnWjbdPmk1M-unsplash.jpg";
-import image2 from "@/lib/images/michela-ampolo-7tDGb3HrITg-unsplash.jpg";
+import image1 from "@/lib/images/towel.png";
+import image2 from "@/lib/images/comb.webp";
 import image3 from "@/lib/images/toa-heftiba-GLl6_-L3fxM-unsplash.jpg";
 import Image from "next/image";
 import CoreButton from "../custom/corebutton";
@@ -23,12 +23,6 @@ const SaloonProducts = () => {
       descp:
         " waves Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
       color: "#DEB18B",
-    },
-    {
-      index: 200,
-      descp:
-        " tight curls Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
-      color: "#C9DBE5",
     },
   ];
 
@@ -64,15 +58,6 @@ const SaloonProducts = () => {
                 style={{ objectPosition: "center", objectFit: "cover" }}
               />
             </div>
-            <div className=" w-full h-full  rounded-xl overflow-hidden relative">
-              <Image
-                src={image3}
-                fill
-                alt=""
-                className=" "
-                style={{ objectPosition: "center", objectFit: "cover" }}
-              />
-            </div>
           </motion.div>
         </div>
 
@@ -90,7 +75,7 @@ const SaloonProducts = () => {
                 category == 0 ? "bg-white" : "bg-[#ffffff6c]"
               }  uppercase text-black`}
             >
-              spiral curls
+              Curticle Care Towel
             </button>
             <button
               onClick={() => setCategory(100)}
@@ -98,20 +83,20 @@ const SaloonProducts = () => {
                 category == 100 ? "bg-white" : "bg-[#ffffff6c]"
               }  uppercase text-black`}
             >
-              loose curls & waves
-            </button>
-            <button
-              onClick={() => setCategory(200)}
-              className={` px-6 py-4 rounded-2xl ${
-                category == 200 ? "bg-white" : "bg-[#ffffff6c]"
-              }  uppercase text-black`}
-            >
-              tight curls
+              Hair Rubber Comb
             </button>
           </div>
           <SlideView delay={0.2}>
             <h3 className=" text-gray-200 text-center w-[80%] mx-auto text-lg">
-              {content[category / 100].descp}
+              While choosing the right shampoo and conditioner is essential for
+              maintaining the health of your hair and scalp, the role of
+              high-quality haircare tools is equally crucial. Consider the
+              gentle touch of a cuticle towel that absorbs moisture without
+              causing frizz, or the seamless glide of brushes and combs through
+              your locks. These tools are key allies in your haircare regimen,
+              working in harmony with our products to enhance their
+              effectiveness and ensure your hair not only looks but truly feels
+              its best.
             </h3>
           </SlideView>
 

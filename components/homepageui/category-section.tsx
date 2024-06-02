@@ -7,6 +7,8 @@ import CoreButton from "../custom/corebutton";
 import shampoo from "@/lib/images/pngwing.com.png";
 import SlideView from "../custom/SlideInView";
 import { color, motion } from "framer-motion";
+import coreshampoo from "@/lib/images/shampoo.jpg";
+import hairtools from "@/lib/images/hair_care_tools_banner_homeopage_761x.jpg";
 
 const CategorySection = () => {
   const [category, setCategory] = useState(0);
@@ -15,20 +17,16 @@ const CategorySection = () => {
     {
       index: 0,
       descp:
-        " curls Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
+        " Our shampoos are formulated with the finest natural ingredients to gently cleanse your hair while infusing it with essential nutrients. Whether you have dry, oily, or color-treated hair, our range of shampoos caters to every hair type, ensuring a perfect match for your unique needs. Experience the invigorating scents and luxurious lathers that leave your hair feeling refreshed, revitalized, and full of life.!",
       color: "#CDE3E0",
+      title: "Shampoos & Conditioners",
     },
     {
       index: 100,
       descp:
-        " waves Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
+        "Enhance your hair care regimen with Core Radiance's premium hair care tools. Designed for both professionals and home users, our tools ensure effortless styling and stunning results.!",
       color: "#DEB18B",
-    },
-    {
-      index: 200,
-      descp:
-        " tight curls Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaqu neque odio tempora ut, enim commodi molestiae, debitis delectusipsa laboriosam ea nihil hic reiciendis tenetur inventore? Asperiores deleniti animi at!",
-      color: "#C9DBE5",
+      title: "HairCare Tools",
     },
   ];
 
@@ -48,13 +46,13 @@ const CategorySection = () => {
           >
             <div className=" w-full h-full  rounded-xl overflow-hidden relative">
               <Image
-                src={image1}
+                src={coreshampoo}
                 fill
                 alt=""
                 className=" "
                 style={{ objectPosition: "center", objectFit: "cover" }}
               />
-
+              {/* 
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -95,18 +93,18 @@ const CategorySection = () => {
                     <p className=" text-sm">$20</p>
                   </motion.div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
             <div className=" w-full h-full  rounded-xl overflow-hidden relative">
               <Image
-                src={image2}
+                src={hairtools}
                 fill
                 alt=""
                 className=" "
                 style={{ objectPosition: "center", objectFit: "cover" }}
               />
 
-              <motion.div
+              {/* <motion.div
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false }}
@@ -146,67 +144,21 @@ const CategorySection = () => {
                     <p className=" text-sm">$20</p>
                   </motion.div>
                 </div>
-              </motion.div>
-            </div>
-            <div className=" w-full h-full  rounded-xl overflow-hidden relative">
-              <Image
-                src={image3}
-                fill
-                alt=""
-                className=" "
-                style={{ objectPosition: "center", objectFit: "cover" }}
-              />
-
-              <motion.div
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: false }}
-                transition={{ duration: 0.2, delay: 0.3 }}
-                variants={{
-                  visible: { opacity: 1, x: 0 },
-                  hidden: { opacity: 0, x: -50 },
-                }}
-                className=" z-10 absolute bottom-5"
-              >
-                <div className="flex items-center">
-                  <Image
-                    width={200}
-                    height={300}
-                    className=" z-50  "
-                    alt=""
-                    src={shampoo}
-                  />
-                  <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: false }}
-                    transition={{ duration: 0.2, delay: 0.5 }}
-                    variants={{
-                      visible: { opacity: 1 },
-                      hidden: { opacity: 0 },
-                    }}
-                    className=" space-y-1 w-[18rem] min-h-20 py-5  pl-10  bg-[#000000b2] text-white rounded-tr-lg rounded-br-lg -translate-x-[5.5rem]"
-                  >
-                    <span className=" uppercase font-medium text-[13px] flex items-center space-x-2">
-                      <h1 className=" font-bold mr-2">coreradiance </h1> for
-                      spiral curls
-                    </span>
-                    <h2 className=" font-semibold text-lg">
-                      Soft Defining Mousse
-                    </h2>
-                    <p className=" text-sm">$20</p>
-                  </motion.div>
-                </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </div>
 
         <div className=" space-y-10 w-[50%] h-full flex text-black flex-col items-center justify-center">
           <SlideView delay={0.1}>
-            <h1 className=" text-7xl font-semibold font-melodrama">
-              Our curl types
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, ease: "circOut" }}
+              className=" text-5xl font-semibold font-melodrama"
+            >
+              Our {content[category / 100].title}
+            </motion.h1>
           </SlideView>
 
           <div className=" space-x-5">
@@ -216,7 +168,7 @@ const CategorySection = () => {
                 category == 0 ? "bg-white" : "bg-[#ffffff6c]"
               }  uppercase text-black`}
             >
-              spiral curls
+              Shampoos & Conditioners
             </button>
             <button
               onClick={() => setCategory(100)}
@@ -224,21 +176,18 @@ const CategorySection = () => {
                 category == 100 ? "bg-white" : "bg-[#ffffff6c]"
               }  uppercase text-black`}
             >
-              loose curls & waves
-            </button>
-            <button
-              onClick={() => setCategory(200)}
-              className={` px-6 py-4 rounded-2xl ${
-                category == 200 ? "bg-white" : "bg-[#ffffff6c]"
-              }  uppercase text-black`}
-            >
-              tight curls
+              Hair Care Tools
             </button>
           </div>
           <SlideView delay={0.2}>
-            <h3 className=" text-gray-600 text-center w-[80%] mx-auto text-lg">
+            <motion.h3
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className=" text-gray-600 text-center w-[80%] mx-auto text-lg"
+            >
               {content[category / 100].descp}
-            </h3>
+            </motion.h3>
           </SlideView>
 
           <CoreButton>
