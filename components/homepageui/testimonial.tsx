@@ -12,6 +12,7 @@ import star from "@/lib/images/icons8-star-64.png";
 import { TextGenerateEffect } from "../custom/text-generate-effect";
 import Typewriter from "../custom/lazyload";
 import LazyRenderComponent from "../custom/lazyload";
+import { ReactTyped } from "react-typed";
 
 const Testimonial = () => {
   const [category, setCategory] = useState(0);
@@ -51,15 +52,15 @@ const Testimonial = () => {
               key={index}
               className=" w-[100vw]  h-full mx-auto flex items-center justify-between"
             >
-              <div className=" w-[45%]  h-full overflow-hidden">
+              <div className=" w-[45%] h-full  overflow-hidden">
                 <motion.div className={` w-full h-full -translate-y-[0%]`}>
-                  <div className=" w-full h-full bg-red-400  rounded-xl overflow-hidden relative">
+                  <div className=" w-full h-[90%] rounded-xl overflow-hidden relative">
                     <Image
                       src={image1}
                       fill
                       alt=""
                       className=" bg-no-repeat "
-                      style={{ objectPosition: "center", objectFit: "cover" }}
+                      style={{ objectPosition: "center", objectFit: "contain" }}
                     />
                   </div>
                 </motion.div>
@@ -77,7 +78,13 @@ const Testimonial = () => {
                   </div>
                 </div>
                 <LazyRenderComponent>
-                  <TextGenerateEffect words={item.comment} />
+                  {/* <TextGenerateEffect words={item.comment} /> */}
+                  <ReactTyped
+                    className="text-black font-melodrama text-4xl font-semibold leading-normal"
+                    strings={[item.comment]}
+                    typeSpeed={40}
+                    backSpeed={60}
+                  />
                 </LazyRenderComponent>
 
                 <SlideView delay={0.2}>

@@ -30,7 +30,7 @@ export default function RootLayout({
       <SmoothScrolling>
         <body
           className={cn(
-            "min-h-screen relative font-poppins bg-background  antialiased"
+            "min-h-screen relative font-poppins bg-background  antialiased w-full overflow-x-hidden"
           )}
         >
           <div className=" w-full ">

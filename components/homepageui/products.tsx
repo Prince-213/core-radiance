@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import image1 from "@/lib/images/towel.png";
-import image2 from "@/lib/images/comb.webp";
+import image2 from "@/lib/images/comb-ezgif.com-webp-to-jpg-converter.jpg";
 import image3 from "@/lib/images/toa-heftiba-GLl6_-L3fxM-unsplash.jpg";
 import Image from "next/image";
 import CoreButton from "../custom/corebutton";
