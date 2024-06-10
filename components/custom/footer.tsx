@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CurrencySelect } from "./currencyselect";
-
 const Footer = () => {
   return (
     <footer className=" w-full bg-foralwhite pb-[60px] pt-[120px]">

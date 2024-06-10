@@ -9,6 +9,7 @@ import SlideView from "../custom/SlideInView";
 import { color, motion } from "framer-motion";
 import coreshampoo from "@/lib/images/shampoo.jpg";
 import hairtools from "@/lib/images/hair_care_tools_banner_homeopage_761x.jpg";
+import WavyText from "../ace/wavy-text";
 
 const CategorySection = () => {
   const [category, setCategory] = useState(0);
@@ -157,7 +158,7 @@ const CategorySection = () => {
               transition={{ delay: 0.2, ease: "circOut" }}
               className=" text-5xl font-semibold font-melodrama"
             >
-              Our {content[category / 100].title}
+              <WavyText text={`Our ${content[category / 100].title}`} />
             </motion.h1>
           </SlideView>
 

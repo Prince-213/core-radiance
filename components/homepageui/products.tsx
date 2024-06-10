@@ -7,6 +7,7 @@ import CoreButton from "../custom/corebutton";
 import shampoo from "@/lib/images/pngwing.com.png";
 import SlideView from "../custom/SlideInView";
 import { color, motion } from "framer-motion";
+import WavyText from "../ace/wavy-text";
 
 const SaloonProducts = () => {
   const [category, setCategory] = useState(0);
@@ -64,7 +65,7 @@ const SaloonProducts = () => {
         <div className=" space-y-10 w-[50%] h-full flex text-white flex-col items-center justify-center">
           <SlideView delay={0.1}>
             <h1 className=" text-7xl font-semibold font-melodrama">
-              Salon-quality products
+              <WavyText text="Saloon Quality Products" />
             </h1>
           </SlideView>
 

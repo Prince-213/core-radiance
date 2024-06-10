@@ -2,6 +2,7 @@ import React from "react";
 import back from "@/lib/images/coregirls.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import WavyText from "../ace/wavy-text";
 
 const Briefing = () => {
   return (
@@ -19,6 +20,7 @@ const Briefing = () => {
               Dicover the benefits of core radiance
             </motion.h1>
           </div>
+
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -26,7 +28,7 @@ const Briefing = () => {
             className=" font-melodrama text-6xl text-white font-semibold max-w-[80%]"
           >
             {
-              " We're All-Natural, All-Effective: Better for Your Hair, Better for the Planet"
+              <WavyText text=" We're All-Natural, All-Effective: Better for Your Hair, Better for the Planet" />
             }
           </motion.h1>
         </div>
