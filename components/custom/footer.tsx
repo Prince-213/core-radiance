@@ -5,9 +5,9 @@ import Link from "next/link";
 import { CurrencySelect } from "./currencyselect";
 const Footer = () => {
   return (
-    <footer className=" w-full bg-foralwhite pb-[60px] pt-[120px]">
-      <div className=" w-[80%] mx-auto gap-y-20 grid grid-cols-3">
-        <div className=" space-y-10">
+    <footer className=" w-full bg-foralwhite pb-[30px] lg:pb-[60px] lg:pt-[120px] pt-[60px]">
+      <div className=" w-[90%] lg:w-[80%] mx-auto gap-10  lg:gap-y-20 grid grid-cols-2 lg:grid-cols-3">
+        <div className=" hidden lg:block space-y-10">
           <Image
             src={
               "https://mycoreradiance.com/cdn/shop/files/Screenshot_2022-10-21_at_22.02.57_220x.png?v=1666382669"
@@ -88,15 +88,21 @@ const Footer = () => {
             Contact Info
           </h1>
           <nav className=" flex flex-col space-y-5">
-            <span className=" flex items-center space-x-1">
+            <span className=" hidden  lg:flex items-center space-x-1">
               <p>Email:</p>
-              <a href="#" className=" text-base underline">
+              <br />
+              <a href="#" className=" text-base w-[90%] mx-auto underline">
                 hello@mycoreradiance.com
               </a>
             </span>
 
             <a href="#" className=" text-base underline">
               Tel: +46 73 848 58 18
+            </a>
+
+            <p>Email:</p>
+            <a href="#" className=" text-sm underline">
+              hello@mycoreradiance.com
             </a>
           </nav>
         </div>
@@ -131,7 +137,7 @@ const Footer = () => {
         </div>
       </div>
       <br />
-      <div className=" w-[80%] mx-auto flex justify-between items-center">
+      <div className=" hidden w-[80%] mx-auto lg:flex justify-between items-center">
         <div className=" ">
           <CurrencySelect />
         </div>

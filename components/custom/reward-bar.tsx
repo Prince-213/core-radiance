@@ -29,7 +29,7 @@ const RewardBar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className=" w-full z-50 border-2 border-gray-200 border-b-0 rounded-tr-xl rounded-tl-xl py-6  bg-white  "
           >
-            <div className=" w-[20%] space-y-4 flex flex-col mx-auto justify-center  items-center">
+            <div className=" w-[80%] lg:w-[20%] space-y-4 flex flex-col mx-auto justify-center  items-center">
               <h2>Subscribe & Get 10% Off Your First Order</h2>
               <div className=" flex items-center justify-between px-6 py-3 rounded-lg border-2 border-gray-300 w-full">
                 {/* <div>

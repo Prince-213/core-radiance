@@ -25,10 +25,10 @@ const Briefing = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className=" font-melodrama text-6xl text-white font-semibold max-w-[80%]"
+            className=" font-melodrama text-4xl leading-[4rem] lg:text-6xl text-white font-semibold lg:max-w-[80%]"
           >
             {
-              <WavyText text=" We're All-Natural, All-Effective: Better for Your Hair, Better for the Planet" />
+              " We're All-Natural, All-Effective: Better for Your Hair, Better for the Planet"
             }
           </motion.h1>
         </div>

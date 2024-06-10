@@ -27,7 +27,10 @@ import Social from "@/components/homepageui/social";
 export default function Home() {
   return (
     <div className=" relative font-poppins w-full min-h-screen">
-      <PreLoader />
+      <div className=" hidden lg:block">
+        <PreLoader />
+      </div>
+
       <LandingSection />
       <CategorySection />
       <BestSeller />

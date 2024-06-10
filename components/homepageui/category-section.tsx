@@ -36,9 +36,9 @@ const CategorySection = () => {
       initial={{ backgroundColor: "#CDE3E0" }}
       animate={{ backgroundColor: content[category / 100].color }}
       transition={{ duration: 0.2, ease: "circIn" }}
-      className=" py-20 w-full h-[90vh] "
+      className=" py-20 w-full min-h-screen lg:h-[90vh] "
     >
-      <div className=" w-[90%] h-full mx-auto flex items-center justify-between">
+      <div className=" w-[90%] h-full mx-auto hidden lg:flex items-center justify-between">
         <div className=" w-[45%] h-full overflow-hidden">
           <motion.div
             initial={{ y: 0 }}
@@ -194,6 +194,90 @@ const CategorySection = () => {
           <CoreButton>
             <p className=" uppercase">shop core-radiance</p>
           </CoreButton>
+        </div>
+      </div>
+
+      <div className=" w-[90%] h-full mx-auto flex flex-col ">
+        <div className=" space-y-5 w-full h-full flex text-black flex-col items-center ">
+          <SlideView delay={0.1}>
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, ease: "circOut" }}
+              className=" text-[25px]   lg:text-5xl font-bold lg:font-semibold font-melodrama"
+            >
+              <WavyText text={`Our ${content[category / 100].title}`} />
+            </motion.h1>
+          </SlideView>
+
+          <div className=" space-x-5 flex">
+            <button
+              onClick={() => setCategory(0)}
+              className={` lg:px-6 lg:py-4 py-2 px-3 rounded-lg lg:rounded-2xl lg:text-lg text-sm ${
+                category == 0 ? "bg-white" : "bg-[#ffffff6c]"
+              }  uppercase text-black`}
+            >
+              Shampoos & Conditioners
+            </button>
+            <button
+              onClick={() => setCategory(100)}
+              className={` lg:px-6 lg:py-4 px-3 py-2 text-sm lg:text-lg rounded-lg lg:rounded-2xl ${
+                category == 100 ? "bg-white" : "bg-[#ffffff6c]"
+              }  uppercase text-black`}
+            >
+              Hair Care Tools
+            </button>
+          </div>
+          {/* <SlideView delay={0.2}>
+            <motion.h3
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className=" text-gray-600 text-center w-[80%] mx-auto text-lg"
+            >
+              {content[category / 100].descp}
+            </motion.h3>
+          </SlideView> */}
+          <div className=" w-full h-full overflow-hidden">
+            <motion.div
+              initial={{ y: 0 }}
+              animate={{ y: `-${category}%` }}
+              className={` w-full h-[50vh] -translate-y-[0%]`}
+            >
+              <div className=" w-full h-full  rounded-xl overflow-hidden relative">
+                <Image
+                  src={coreshampoo}
+                  fill
+                  alt=""
+                  className=" "
+                  style={{ objectPosition: "center", objectFit: "cover" }}
+                />
+              </div>
+              <div className=" w-full h-full  rounded-xl overflow-hidden relative">
+                <Image
+                  src={hairtools}
+                  fill
+                  alt=""
+                  className=" "
+                  style={{ objectPosition: "center", objectFit: "cover" }}
+                />
+              </div>
+            </motion.div>
+          </div>
+          <SlideView delay={0.2}>
+            <motion.h3
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className=" text-gray-600 text-center w-full mx-auto leading-[2rem] "
+            >
+              {content[category / 100].descp}
+            </motion.h3>
+          </SlideView>
+          {/* 
+          <CoreButton>
+            <p className=" uppercase">shop core-radiance</p>
+          </CoreButton> */}
         </div>
       </div>
     </motion.div>

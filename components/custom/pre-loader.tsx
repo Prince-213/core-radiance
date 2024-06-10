@@ -49,7 +49,7 @@ const PreLoader = () => {
                 animate={{ height: "0vh", transformOrigin: "bottom" }}
                 transition={{ delay: 4 + index / 3, ease: easeOut }}
                 key={item}
-                className=" w-full h-[100vh] bg-coregold"
+                className=" w-full h-[100vh] m-0 bg-coregold"
               ></motion.div>
             );
           })}
