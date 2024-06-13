@@ -32,7 +32,7 @@ const SaloonProducts = () => {
       //   initial={{ backgroundColor: " c" }}
       //   animate={{ backgroundColor: content[category / 100].color }}
       transition={{ duration: 0.2, ease: "circIn" }}
-      className=" py-20 w-full h-[80vh] bg-coregold "
+      className=" py-20 w-full lg:h-[80vh] bg-coregold "
     >
       <div className=" hidden w-[90%]  h-full mx-auto lg:flex flex-row-reverse items-center justify-between">
         <div className=" w-[45%] h-full overflow-y-hidden ">
@@ -134,11 +134,11 @@ const SaloonProducts = () => {
             </button>
           </div>
 
-          <div className=" w-full h-[50vh] overflow-hidden">
+          <div className=" w-full bg-blue-400 h-[50vh] overflow-hidden">
             <motion.div
               initial={{ y: 0 }}
               animate={{ y: `-${category}%` }}
-              className={` w-full h-full -translate-y-[0%]`}
+              className={` w-full h-[50vh] bg-blue-500 -translate-y-[0%]`}
             >
               <div className=" w-full h-full  rounded-xl overflow-hidden relative">
                 <Image
