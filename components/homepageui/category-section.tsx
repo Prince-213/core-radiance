@@ -197,7 +197,7 @@ const CategorySection = () => {
         </div>
       </div>
 
-      <div className=" w-[90%] h-full mx-auto flex flex-col ">
+      <div className=" w-[90%] lg:hidden h-full mx-auto flex flex-col ">
         <div className=" space-y-5 w-full h-full flex text-black flex-col items-center ">
           <SlideView delay={0.1}>
             <motion.h1

@@ -32,10 +32,10 @@ const SaloonProducts = () => {
       //   initial={{ backgroundColor: " c" }}
       //   animate={{ backgroundColor: content[category / 100].color }}
       transition={{ duration: 0.2, ease: "circIn" }}
-      className=" py-20 w-full h-fit bg-coregold "
+      className=" py-20 w-full h-[80vh] bg-coregold "
     >
-      <div className=" hidden w-[90%] h-full mx-auto lg:flex flex-row-reverse items-center justify-between">
-        <div className=" w-[45%] h-full overflow-hidden">
+      <div className=" hidden w-[90%]  h-full mx-auto lg:flex flex-row-reverse items-center justify-between">
+        <div className=" w-[45%] h-full overflow-y-hidden ">
           <motion.div
             initial={{ y: 0 }}
             animate={{ y: `-${category}%` }}
@@ -107,7 +107,7 @@ const SaloonProducts = () => {
         </div>
       </div>
 
-      <div className=" w-[90%] h-full mx-auto flex flex-col ">
+      <div className=" w-[90%] lg:hidden h-full mx-auto flex flex-col ">
         <div className=" space-y-6 w-full h-full flex text-white flex-col items-center justify-center">
           <SlideView delay={0.1}>
             <h1 className=" text-4xl font-semibold font-melodrama">

@@ -50,7 +50,7 @@ const Testimonial = () => {
           return (
             <div
               key={index}
-              className=" w-[100vw]  h-full mx-auto flex lg:flex-row flex-col items-center justify-between"
+              className=" w-[100vw]  h-full mx-auto flex lg:flex-row flex-col items-center lg:items-start justify-between"
             >
               <div className=" lg:hidden flex flex-col items-center">
                 <p className=" uppercase font-medium">sylist recommended</p>
@@ -62,24 +62,22 @@ const Testimonial = () => {
                   <Image src={star} width={20} height={20} alt="" />
                 </div>
               </div>
-              <br />
+
               <div className=" w-full lg:w-[45%] h-full  overflow-hidden">
                 <motion.div className={` w-full h-full -translate-y-[0%]`}>
                   <div className=" w-full h-[60vh] rounded-xl overflow-hidden relative">
                     <Image
                       src={image1}
-                      width={420}
-                      height={420}
+                      fill
                       alt=""
                       className=" bg-no-repeat "
-                      style={{ objectPosition: "center", objectFit: "cover" }}
+                      style={{ objectPosition: "center", objectFit: "contain" }}
                     />
                   </div>
                 </motion.div>
               </div>
-              <br />
 
-              <div className=" space-y-8  w-[90%] mx-auto lg:w-[55%] lg:pr-20 h-full flex text-black flex-col items-center lg:items-start lg:justify-center ">
+              <div className=" space-y-8  w-[90%] mx-auto  lg:w-[55%]  h-full lg:h-[60vh] flex text-black flex-col items-center lg:items-start lg:justify-center  ">
                 <div className=" hidden lg:block">
                   <p className=" uppercase font-medium">sylist recommended</p>
                   <div className=" flex items-start space-x-2">
@@ -92,12 +90,15 @@ const Testimonial = () => {
                 </div>
                 <LazyRenderComponent>
                   {/* <TextGenerateEffect words={item.comment} /> */}
-                  <ReactTyped
-                    className="text-black font-melodrama text-2xl font-semibold leading-normal"
-                    strings={[item.comment]}
-                    typeSpeed={40}
-                    backSpeed={60}
-                  />
+
+                  <div className=" lg:w-[70%]">
+                    <ReactTyped
+                      className="text-black font-melodrama text-2xl font-semibold leading-normal"
+                      strings={[item.comment]}
+                      typeSpeed={40}
+                      backSpeed={60}
+                    />
+                  </div>
                 </LazyRenderComponent>
 
                 <SlideView delay={0.2}>

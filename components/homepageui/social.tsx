@@ -89,7 +89,7 @@ const Social = () => {
         </div>
       </div>
 
-      <div className=" w-[90%] mx-auto gap-10 grid grid-cols-2">
+      <div className=" lg:hidden w-[90%] mx-auto gap-10 grid grid-cols-2">
         <div className=" group relative col-span-2  w-full h-[50vh] bg-red-400">
           <div className=" opacity-0 group-hover:opacity-100 transition-all duration-150 ease-in w-full flex items-center z-30 justify-center h-full absolute top-0 bg-[#00000079]">
             <Instagram size={36} color="white" />

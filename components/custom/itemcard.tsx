@@ -11,7 +11,7 @@ interface Item {
 }
 const ItemCard = ({ item }: { item: Item }) => {
   return (
-    <div className=" w-full group flex flex-col justify-between relative overflow-hidden pb-0 h-[90vh] bg-[#f4f4f4] rounded-xl ">
+    <div className=" w-full group flex flex-col justify-between relative overflow-hidden pb-0 h-[70vh] bg-[#f4f4f4] rounded-xl ">
       <div className=" absolute top-0 z-10 left-0 w-full flex items-start justify-between">
         <div className=" px-3 py-4 bg-gray-200 rounded-br-xl  text-black uppercase text-sm font-medium w-fit">
           best seller
@@ -27,7 +27,6 @@ const ItemCard = ({ item }: { item: Item }) => {
         </div>
       </div>
       <div className=" justify-center flex flex-col relative pt-[25rem] items-center h-[70%] ">
-        <Image width={50} height={50} className="  " alt="" src={item.image} />
         <Image
           fill
           className=" group-hover:opacity-100 transition-all duration-150 ease-in object-cover object-center  "

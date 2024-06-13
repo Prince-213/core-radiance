@@ -30,15 +30,15 @@ const content = [
 
 const BestSeller = () => {
   return (
-    <div className=" w-[90%] mx-auto overflow-x-scroll h-fit lg:h-[90vh] py-10">
+    <div className=" w-[90%] mx-auto lg:overflow-hidden overflow-x-scroll h-fit lg:h-fit py-10">
       <h1 className=" text-center font-semibold text-4xl font-melodrama">
         Best Sellers
       </h1>
       <br />
-      <div className=" flex gap-x-10 h-full mx-auto lg:grid lg:grid-cols-3">
+      <div className=" lg:overflow-hidden flex gap-x-10 h-full mx-auto lg:grid lg:grid-cols-3">
         {content.map((item, index) => {
           return (
-            <div className=" min-w-[93vw]" key={index}>
+            <div className=" lg:min-w-full min-w-[90vw]" key={index}>
               {" "}
               <ItemCard key={index} item={item} />{" "}
             </div>
