@@ -16,6 +16,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { HoverCardDemo } from "./extramenuhover";
+import { AboutHover } from "./about-hover";
 
 const Header = () => {
   return (
@@ -25,14 +26,17 @@ const Header = () => {
       <div className=" w-full bg-white  lg:bg-white">
         <header className="w-[90%]  mx-auto py-[20px] flex items-center justify-between">
           <div className=" lg:flex items-center justify-between w-full hidden">
-            <Image
-              src={
-                "https://mycoreradiance.com/cdn/shop/files/Screenshot_2022-10-21_at_22.02.57_220x.png?v=1666382669"
-              }
-              width={200}
-              height={200}
-              alt=""
-            />
+            <Link href={"/"}>
+              <Image
+                src={
+                  "https://mycoreradiance.com/cdn/shop/files/Screenshot_2022-10-21_at_22.02.57_220x.png?v=1666382669"
+                }
+                width={200}
+                height={200}
+                alt=""
+              />
+            </Link>
+
             <motion.nav
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,16 +48,14 @@ const Header = () => {
               <StyledLink href="/">
                 <p>Ingredient</p>
               </StyledLink>
-              <StyledLink href="/">
-                <p>About</p>
-              </StyledLink>
-              <StyledLink href="/">
+              <AboutHover />
+              {/* <StyledLink href="/">
                 <div className=" flex items-center space-x-4">
                   <Image src={sparkle} width={20} height={20} alt="" />
                   <p>Special offers</p>
                   <Image src={sparkle} width={20} height={20} alt="" />
                 </div>
-              </StyledLink>
+              </StyledLink> */}
               <StyledLink href="/">
                 <p>Contact</p>
               </StyledLink>
