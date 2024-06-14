@@ -29,7 +29,7 @@ export function AboutHover() {
             <p className="  uppercase ">my story</p>
           </StyledLink>
 
-          <StyledLink href="/faq">
+          <StyledLink href="/asked">
             <p className="  mt-4  uppercase ">Q&A</p>
           </StyledLink>
         </div>

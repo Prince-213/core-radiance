@@ -22,6 +22,7 @@ const config = {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
+        foral: "#ece4d7",
         darkslategreen: "#094535",
         coregold: "#C79716",
         foralwhite: "#f5f3eb",

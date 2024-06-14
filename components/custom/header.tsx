@@ -45,7 +45,7 @@ const Header = () => {
             >
               <HoverCardDemo />
 
-              <StyledLink href="/">
+              <StyledLink href="/ingredients">
                 <p>Ingredient</p>
               </StyledLink>
               <AboutHover />
@@ -56,7 +56,7 @@ const Header = () => {
                   <Image src={sparkle} width={20} height={20} alt="" />
                 </div>
               </StyledLink> */}
-              <StyledLink href="/">
+              <StyledLink href="/contact">
                 <p>Contact</p>
               </StyledLink>
             </motion.nav>
