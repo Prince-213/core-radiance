@@ -62,6 +62,9 @@ const Header = () => {
               <StyledLink href="/contact">
                 <p>Contact</p>
               </StyledLink>
+              <StyledLink href="/forum">
+                <p>Forum</p>
+              </StyledLink>
             </motion.nav>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
