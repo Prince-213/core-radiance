@@ -11,7 +11,7 @@ interface Item {
 }
 const ItemCard = ({ item }: { item: Item }) => {
   return (
-    <div className=" w-full group flex flex-col justify-between relative overflow-hidden pb-0 h-[70vh] bg-[#f4f4f4] rounded-xl ">
+    <div className=" w-full group flex flex-col justify-between relative overflow-hidden pb-0 h-[80vh] bg-[#f4f4f4] rounded-xl ">
       <div className=" absolute top-0 z-10 left-0 w-full flex items-start justify-between">
         <div className=" px-3 py-4 bg-gray-200 rounded-br-xl  text-black uppercase text-sm font-medium w-fit">
           best seller
@@ -26,21 +26,21 @@ const ItemCard = ({ item }: { item: Item }) => {
           </div>
         </div>
       </div>
-      <div className=" justify-center flex flex-col relative pt-[25rem] items-center h-[70%] ">
+      <div className=" justify-center flex flex-col relative pt-[25rem] overflow-hidden items-center h-[70%] ">
         <Image
           fill
-          className=" group-hover:opacity-100 transition-all duration-150 ease-in object-cover object-center  "
+          className=" group-hover:opacity-100 scale-100 group-hover:scale-110 transition-all duration-150 ease-in object-cover object-center  "
           alt=""
           src={item.image}
         />
       </div>
       <div className=" h-[30%] justify-between pt-5 flex flex-col items-center">
-        <div className=" text-center">
-          <p className=" uppercase text-sm font-medium w-[90%] mx-auto">
+        <div className=" text-center flex flex-col justify-between h-full">
+          <p className=" uppercase text-base font-medium w-[90%] mx-auto">
             {item.name}
           </p>
           <br />
-          <p>{item.price}</p>
+          <p className=" font-bold text-lg">{item.price}</p>
         </div>
         <button className=" opacity-75 group-hover:opacity-100 transition-all duration-150 ease-in hover:bg-black bg-red-400 text-white font-medium text-lg text-center w-full py-4">
           Quick Add

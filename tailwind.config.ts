@@ -24,6 +24,7 @@ const config = {
         input: "hsl(var(--input))",
         foral: "#ece4d7",
         darkslategreen: "#094535",
+        buttonpink: "#d53f53",
         coregold: "#C79716",
         foralwhite: "#f5f3eb",
         ring: "hsl(var(--ring))",
@@ -88,7 +89,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("daisyui")],
 } satisfies Config;
 
 export default config;

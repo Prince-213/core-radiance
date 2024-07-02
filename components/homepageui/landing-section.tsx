@@ -20,11 +20,14 @@ import {
   ChevronUp,
   ChevronDown,
   Circle,
+  ChevronRightCircle,
+  ChevronLeftCircle,
 } from "lucide-react";
 import PreLoader from "@/components/custom/pre-loader";
 
 import { useState } from "react";
 import clsx from "clsx";
+import WavyText from "../ace/wavy-text";
 
 const LandingSection = () => {
   const [heroSlide, setHeroSlide] = useState(0);
@@ -53,7 +56,7 @@ const LandingSection = () => {
                 }}
                 className=" text-lg leading-tight font-normal text-gray-700 uppercase"
               >
-                GET STRONGER, HEALTHIER LOOKING HAIR.
+                <WavyText text="GET STRONGER, HEALTHIER LOOKING HAIR." />
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
@@ -118,7 +121,7 @@ const LandingSection = () => {
                 }}
                 className=" text-lg leading-tight font-normal text-gray-700 uppercase"
               >
-                SAY HELLO TO HEALTHY, RADIANT LOCKS!.
+                <WavyText text="SAY HELLO TO HEALTHY, RADIANT LOCKS!." />
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, y: 50 }}
@@ -244,10 +247,14 @@ const LandingSection = () => {
 
       <div className=" absolute lg:flex flex-row space-x-4 bottom-[10%] left-[5%] hidden">
         <button onClick={() => setHeroSlide(0)}>
-          <Circle fill={`${heroSlide == 0 ? "black" : "transparent"}`} />
+          <ChevronLeftCircle
+            fill={`${heroSlide == 0 ? "black" : "transparent"}`}
+          />
         </button>
         <button onClick={() => setHeroSlide(100)}>
-          <Circle fill={`${heroSlide == 0 ? "transparent" : "black"}`} />
+          <ChevronRightCircle
+            fill={`${heroSlide == 0 ? "transparent" : "black"}`}
+          />
         </button>
       </div>
     </main>

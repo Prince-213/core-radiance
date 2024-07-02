@@ -17,8 +17,11 @@ import {
 } from "@/components/ui/hover-card";
 import { HoverCardDemo } from "./extramenuhover";
 import { AboutHover } from "./about-hover";
+import useStore from "@/store";
 
 const Header = () => {
+  const { toggleCartModal } = useStore();
+
   return (
     <div className=" w-full fixed top-0 z-50 ">
       <FixedAdvertTop />
@@ -67,12 +70,15 @@ const Header = () => {
               className=" flex items-center space-x-5"
             >
               <Search />
-              <div className=" relative">
-                <ShoppingBagIcon />
+              <button onClick={() => toggleCartModal()} className=" relative">
+                <div>
+                  <ShoppingBagIcon />
+                </div>
+
                 <div className=" w-6 h-6 rounded-full bg-coregold flex items-center justify-center absolute -top-3 -right-2">
                   <p className=" text-white font-medium">3</p>
                 </div>
-              </div>
+              </button>
             </motion.div>
           </div>
           <div className=" lg:hidden w-full flex justify-between items-center">
@@ -85,12 +91,15 @@ const Header = () => {
               height={150}
               alt=""
             />
-            <div className=" relative">
-              <ShoppingBagIcon />
+            <button onClick={() => toggleCartModal()} className=" relative">
+              <div>
+                <ShoppingBagIcon />
+              </div>
+
               <div className=" w-6 h-6 rounded-full bg-coregold flex items-center justify-center absolute -top-3 -right-2">
                 <p className=" text-white font-medium">3</p>
               </div>
-            </div>
+            </button>
           </div>
         </header>
       </div>

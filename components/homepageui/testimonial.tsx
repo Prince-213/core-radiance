@@ -95,7 +95,7 @@ const Testimonial = () => {
                     <ReactTyped
                       className="text-black font-melodrama text-2xl font-semibold leading-normal"
                       strings={[item.comment]}
-                      typeSpeed={40}
+                      typeSpeed={35}
                       backSpeed={60}
                     />
                   </div>

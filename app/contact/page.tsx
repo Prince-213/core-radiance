@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className=" w-full min-h-screen">
-      <div className=" w-full bg-foralwhite py-[90px] mt-[10vh]">
+    <div className=" w-full min-h-screen pt-[10vh]">
+      <div className=" w-full bg-foralwhite py-[90px] ">
         <div className=" w-[90%] mx-auto flex flex-col items-center">
           <h1 className=" text-[80px] text-center font-melodrama">
             Contact Us

@@ -4,17 +4,25 @@ import { ArrowRight, ChevronUp, X } from "lucide-react";
 import React from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import useStore from "@/store";
 
 const RewardBar = () => {
   const [view, setView] = useState(false);
 
+  const { openModal, modal } = useStore();
+
   return (
     <AnimatePresence mode="wait" initial={false}>
       <div className=" w-full relative">
-        <div className=" font-medium shadow-xl text-center z-50 bg-white  p-2 text-lg flex flex-col items-center justify-center right-5 bottom-5 fixed w-[6rem] h-[6rem] rounded-full">
+        <button
+          onClick={() => openModal()}
+          className={` z-30 font-medium shadow-xl text-center  bg-white  p-2 text-lg flex flex-col items-center justify-center right-5 bottom-5 fixed w-[6rem] h-[6rem] rounded-full ${
+            modal ? " translate-y-11 opacity-0 " : " opacity-100 translate-y-0 "
+          } duration-150 ease-in `}
+        >
           <p>Get</p>
           <p className=" text-center text-pretty">20% Off</p>
-        </div>
+        </button>
         <button
           onClick={() => setView(false)}
           className=" absolute top-10 right-10"

@@ -2,6 +2,7 @@
 
 import { ReactLenis } from "@studio-freight/react-lenis";
 
+
 function SmoothScrolling({ children }: { children: React.ReactNode }) {
   // lenis options for configuration
   const lenisOptions = {

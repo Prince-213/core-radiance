@@ -53,7 +53,6 @@ const WavyText: FC<Props> = ({
       variants={container}
       initial="hidden"
       whileInView={"visible"}
-      animate={"visible"}
       viewport={{ once: false }}
       {...props}
     >

@@ -5,9 +5,14 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import Header from "@/components/custom/header";
 import Footer from "@/components/custom/footer";
-import { ChevronUp } from "lucide-react";
+import { ChevronUp, XCircle } from "lucide-react";
 import RewardBar from "@/components/custom/reward-bar";
 import SmoothScrolling from "@/components/custom/smoothscroll";
+import NewsModal from "@/components/custom/new-modal";
+import Image from "next/image";
+import advert from "@/lib/images/autumn-goodman-vTL_qy03D1I-unsplash.jpg";
+import ModalWrap from "@/components/custom/modal-wrap";
+import CartView from "@/components/custom/cartview";
 
 const popSans = PopSans({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -33,15 +38,18 @@ export default function RootLayout({
             "min-h-screen relative font-poppins bg-background  antialiased w-full overflow-x-hidden"
           )}
         >
-          <div className=" w-full ">
-            <Header />
-          </div>
+          <ModalWrap>
+            <CartView />
+            <div className=" w-full ">
+              <Header />
+            </div>
 
-          <div className=" fixed bottom-0 z-50 w-full">
-            <RewardBar />
-          </div>
+            <div className=" fixed bottom-0 z-50 w-full">
+              <RewardBar />
+            </div>
 
-          {children}
+            {children}
+          </ModalWrap>
 
           <div className=" w-full">
             <Footer />

@@ -18,7 +18,7 @@ export function HoverCardDemo() {
     <HoverCard>
       <HoverCardTrigger asChild>
         <div>
-          <StyledLink href="/">
+          <StyledLink href="/shop">
             <p>Shop</p>
           </StyledLink>
         </div>
