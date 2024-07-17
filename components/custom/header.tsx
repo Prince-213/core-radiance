@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import FixedAdvertTop from "./FixedAdvertTop";
-import { MenuIcon, Search, ShoppingBagIcon } from "lucide-react";
+import { MenuIcon, Search, ShoppingBagIcon, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import sparkle from "@/lib/icons/icons8-sparkle-96.png";
@@ -21,6 +21,44 @@ import useStore from "@/store";
 
 const Header = () => {
   const { toggleCartModal } = useStore();
+
+  const [mobileNav, setMobileNav] = useState(false);
+
+  const mobileLinks = [
+    {
+      name: "Home",
+      href: "/",
+    },
+
+    {
+      name: "My Story",
+      href: "/my-story",
+    },
+    {
+      name: "Shop",
+      href: "/shop",
+    },
+
+    {
+      name: "Ingridients",
+      href: "/ingredients",
+    },
+
+    {
+      name: "Q&A",
+      href: "/asked",
+    },
+
+    {
+      name: "Contact Us",
+      href: "/contact",
+    },
+
+    {
+      name: "Forum",
+      href: "/forum",
+    },
+  ];
 
   return (
     <div className=" w-full fixed top-0 z-50 ">
@@ -72,7 +110,9 @@ const Header = () => {
               transition={{ duration: 0.4, ease: easeIn, delay: 0.4 }}
               className=" flex items-center space-x-5"
             >
-              <Search />
+              <button>
+                <User />
+              </button>
               <button onClick={() => toggleCartModal()} className=" relative">
                 <div>
                   <ShoppingBagIcon />
@@ -84,25 +124,52 @@ const Header = () => {
               </button>
             </motion.div>
           </div>
-          <div className=" lg:hidden w-full flex justify-between items-center">
-            <MenuIcon />
-            <Image
-              src={
-                "https://mycoreradiance.com/cdn/shop/files/Screenshot_2022-10-21_at_22.02.57_220x.png?v=1666382669"
-              }
-              width={150}
-              height={150}
-              alt=""
-            />
-            <button onClick={() => toggleCartModal()} className=" relative">
-              <div>
-                <ShoppingBagIcon />
-              </div>
+          <div className=" w-full lg:hidden">
+            <div className=" lg:hidden w-full flex justify-between items-center">
+              <button onClick={() => setMobileNav(!mobileNav)}>
+                <MenuIcon />
+              </button>
 
-              <div className=" w-6 h-6 rounded-full bg-coregold flex items-center justify-center absolute -top-3 -right-2">
-                <p className=" text-white font-medium">3</p>
-              </div>
-            </button>
+              <Link href={"/"}>
+                <Image
+                  src={
+                    "https://mycoreradiance.com/cdn/shop/files/Screenshot_2022-10-21_at_22.02.57_220x.png?v=1666382669"
+                  }
+                  width={150}
+                  height={150}
+                  alt=""
+                />
+              </Link>
+              <button onClick={() => toggleCartModal()} className=" relative">
+                <div>
+                  <ShoppingBagIcon />
+                </div>
+
+                <div className=" w-6 h-6 rounded-full bg-coregold flex items-center justify-center absolute -top-3 -right-2">
+                  <p className=" text-white font-medium">3</p>
+                </div>
+              </button>
+            </div>
+            <div
+              className={` w-full ${
+                mobileNav ? "h-fit opacity-100" : "h-0 opacity-0"
+              } overflow-hidden transition-all duration-200 ease-linear`}
+            >
+              <nav className=" w-full">
+                <ul className=" flex flex-col gap-1">
+                  {mobileLinks.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className=" w-full py-2 text-coregold border-b border-b-gray-200 pb font-semibold text-lg"
+                      >
+                        <Link href={item.href}>{item.name}</Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            </div>
           </div>
         </header>
       </div>

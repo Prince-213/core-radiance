@@ -62,10 +62,15 @@ const FaqPage = () => {
         height={150}
         className=" absolute bottom-0 right-0"
       />
-      <div className=" w-[80%] mx-auto pt-[25vh]">
-        <h1 className=" text-6xl font-bold font-melodrama">FAQ</h1>
+      <div className=" w-[90%] lg:w-[80%] mx-auto pt-[25vh]">
+        <h1
+          className=" text-4xl
+         lg:text-6xl font-bold font-melodrama"
+        >
+          FAQ
+        </h1>
 
-        <div className=" w-[80%] mt-20 space-y-10">
+        <div className=" w-full lg:w-[80%] mt-20 space-y-10">
           {faq.map((item, index) => {
             return (
               <div
@@ -73,7 +78,9 @@ const FaqPage = () => {
                 className=" w-full flex justify-between items-center pb-6 border-b-2 border-black"
               >
                 <div className=" space-y-6">
-                  <h1 className=" font-semibold text-xl">{item.question}</h1>
+                  <h1 className=" font-semibold text-lg lg:text-xl">
+                    {item.question}
+                  </h1>
                   <motion.div
                     initial={{ height: "0px" }}
                     animate={{ height: selected == index ? "" : "0px" }}
@@ -85,11 +92,11 @@ const FaqPage = () => {
                 </div>
                 {selected == index ? (
                   <button onClick={() => setSelected(-1)}>
-                    <MinusCircle size={38} />
+                    <MinusCircle size={35} />
                   </button>
                 ) : (
                   <button onClick={() => setSelected(index)}>
-                    <PlusCircle size={38} />
+                    <PlusCircle size={35} />
                   </button>
                 )}
               </div>

@@ -28,13 +28,15 @@ const content = [
 const Page = () => {
   return (
     <div className=" w-full min-h-screen pb-[90px] pt-[10vh] ">
-      <div className=" w-full bg-foralwhite py-[90px]">
+      <div className=" w-full bg-foralwhite py-[60px] lg:py-[90px]">
         <div className=" w-[90%] mx-auto flex flex-col items-center">
-          <h1 className=" text-[80px] text-center font-melodrama">Shop All</h1>
+          <h1 className=" text-3xl lg:text-[80px] text-center font-melodrama">
+            Shop All
+          </h1>
           <br />
-          <div className=" flex items-center space-x-6">
+          <div className=" flex lg:flex-row flex-col items-center space-x-3 lg:space-x-6">
             <h1 className=" text-lg">Shop by category:</h1>
-            <nav className=" flex items-center space-x-6 text-lg">
+            <nav className=" flex items-center space-x-6 text-sm lg:text-lg">
               <a
                 href="#"
                 className=" hover:underline transition-all duration-200 ease-in"
@@ -57,8 +59,8 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className=" w-[80%] flex flex-col items-center mx-auto pt-[90px]">
-        <div className=" w-full grid grid-cols-3">
+      <div className=" w-[90%] lg:w-[80%] flex flex-col items-center mx-auto pt-[90px]">
+        <div className=" w-full grid grid-cols-1 lg:grid-cols-3">
           {content.map((item, index) => {
             return (
               <div className=" lg:min-w-full min-w-[90vw]" key={index}>

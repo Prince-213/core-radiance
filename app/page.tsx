@@ -1,20 +1,8 @@
 "use client";
 
-import Image from "next/image";
 
-import ItemCard from "@/components/custom/itemcard";
 
-import CoreButton from "@/components/custom/corebutton";
-
-import image1 from "@/lib/images/fleur-kaan-w4Dj3MshHQ0-unsplash (1).jpg";
-import image2 from "@/lib/images/content-pixie-TxBQ7yLj6JU-unsplash (1).jpg";
-import image3 from "@/lib/images/elsa-olofsson-Pm0K9Y3EPUc-unsplash.jpg";
-
-import { easeOut, motion, stagger } from "framer-motion";
-import { Leaf, Flower, Vegan, ChevronUp, ChevronDown } from "lucide-react";
-import PreLoader from "@/components/custom/pre-loader";
-
-import { useState } from "react";
+import { useEffect } from "react";
 import clsx from "clsx";
 import LandingSection from "@/components/homepageui/landing-section";
 import CategorySection from "@/components/homepageui/category-section";
@@ -23,13 +11,28 @@ import SaloonProducts from "@/components/homepageui/products";
 import Testimonial from "@/components/homepageui/testimonial";
 import Briefing from "@/components/homepageui/content";
 import Social from "@/components/homepageui/social";
+import useStore from "@/store";
 
 export default function Home() {
+  const { openModal } = useStore();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Your action to be performed after 10 seconds
+      console.log("10 seconds have passed!");
+
+      openModal();
+    }, 3000); // 10000 milliseconds = 10 seconds
+
+    // Clear the timer to avoid memory leaks
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className=" relative font-poppins w-full min-h-screen">
-      <div className=" hidden lg:block">
+      {/* <div className=" hidden lg:block">
         <PreLoader />
-      </div>
+      </div> */}
 
       <LandingSection />
       <CategorySection />

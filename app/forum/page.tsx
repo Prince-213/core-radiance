@@ -21,7 +21,7 @@ export default function Page() {
           alt=""
           width={250}
           height={250}
-          className=" absolute top-5 -left-20"
+          className=" absolute top-5 -left-20 hidden lg:block"
         />
         <Image
           src={
@@ -30,25 +30,25 @@ export default function Page() {
           alt=""
           width={150}
           height={150}
-          className=" absolute bottom-0 right-0"
+          className=" absolute bottom-0 right-0 hidden lg:block"
         />
         <div className=" w-[90%] mx-auto flex flex-col items-center space-y-4">
-          <h1 className=" text-[60px] text-center font-melodrama">
+          <h1 className=" text-4xl lg:text-[60px] text-center font-melodrama">
             Welcome to Our Coummunity
           </h1>
-          <div className=" w-[42%] p-4 rounded-lg shadow-lg border-gray-200 border-[1px] bg-white flex items-center space-x-4">
+          <div className=" w-[80%] lg:w-[42%] p-4 rounded-lg shadow-lg border-gray-200 border-[1px] bg-white flex items-center space-x-4">
             <Search />
             <input type="text" className=" w-full border-none outline-none" />
           </div>
         </div>
       </div>
-      <div className=" mt-20 w-[60%] mx-auto pb-20">
-        <div className=" w-full grid grid-cols-2 gap-x-10">
-          <button className=" hover:shadow-xl transition-all duration-200 p-5 rounded-lg flex items-center justify-between  border-gray-200 border-[1px] shadow-lg text-2xl font-medium">
+      <div className=" mt-20 w-[90%] lg:w-[60%] mx-auto pb-20">
+        <div className=" w-full grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-x-10">
+          <button className=" hover:shadow-xl transition-all duration-200 p-5 rounded-lg flex items-center justify-between  border-gray-200 border-[1px] shadow-lg text-lg lg:text-2xl font-medium">
             <p>News And Announcements</p>
             <Megaphone size={42} className=" text-coregold" />
           </button>
-          <button className=" hover:shadow-xl transition-all duration-200 p-5 rounded-lg flex items-center justify-between  border-gray-200 border-[1px] shadow-lg text-2xl font-medium">
+          <button className=" hover:shadow-xl transition-all duration-200 p-5 rounded-lg flex items-center justify-between  border-gray-200 border-[1px] shadow-lg text-lg lg:text-2xl font-medium">
             <p>Ask The Community</p>
             <MessageCircle size={42} className=" text-coregold" />
           </button>
@@ -59,8 +59,8 @@ export default function Page() {
           <p>Recently active</p>
         </div>
 
-        <div className=" flex space-x-4 w-full mt-20">
-          <div className=" w-[70%]  rounded-lg border-gray-200 border-2 flex flex-col space-y-5 ">
+        <div className=" flex lg:flex-row flex-col-reverse space-x-4 w-full  mt-10 lg:mt-20">
+          <div className=" w-full lg:w-[70%]  rounded-lg border-gray-200 border-2 grid grid-cols-1 gap-y-5 ">
             {[1, 2, 3].map((item, index) => {
               return (
                 <div
@@ -106,7 +106,7 @@ export default function Page() {
                       Any helpful suggestions are appreciated!
                     </p>
                   </div>
-                  <div className=" flex items-center space-x-8">
+                  <div className=" grid grid-cols-2 gap-4 lg:gap-0 lg:flex lg:flex-row items-center  lg:space-x-8">
                     <button className=" px-6 py-3 border-gray-200 shadow-lg flex items-center space-x-3 border-2 rounded-md hover:shadow-xl transition-all duration-200 ease-in">
                       <ThumbsUp />
                       <p>Like</p>
@@ -115,7 +115,7 @@ export default function Page() {
                       <MessageCircleMoreIcon />
                       <p>Reply</p>
                     </button>
-                    <div className=" px-6 py-3  flex items-center space-x-3 ">
+                    <div className=" px-6 py-3  flex items-center space-x-3 col-span-2 ">
                       <Eye />
                       <p>15 Views</p>
                     </div>
@@ -124,8 +124,8 @@ export default function Page() {
               );
             })}
           </div>
-          <div className=" w-[30%] p-5 space-y-5 border-gray-200 border-2 rounded-lg h-fit">
-            <h1 className=" text-xl font-semibold">Hello There!</h1>
+          <div className=" hidden lg:block w-full lg:w-[30%] p-5 space-y-5 border-gray-200 border-2 rounded-lg h-fit">
+            <h1 className=" text-lg lg:text-xl font-semibold">Hello There!</h1>
             <p className=" text-gray-400">Welcome to Core Radiance Community</p>
             <p className=" text-gray-400">
               Connect, share, and engage with community and build relationships.

@@ -1,9 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
 import Image from "next/image";
-import { MinusCircle, PlusCircle } from "lucide-react";
-import { motion } from "framer-motion";
+
 import WavyText from "@/components/ace/wavy-text";
 
 const Ingredients = () => {

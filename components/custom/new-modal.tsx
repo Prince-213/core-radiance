@@ -25,9 +25,9 @@ const NewsModal = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 60 }}
               transition={{ duration: 0.2, delay: 0.1, ease: "easeIn" }}
-              className=" lg:w-[45%] h-[40rem] flex  bg-foral"
+              className=" w-[90%] lg:w-[45%] h-[30rem] lg:h-[40rem] flex  bg-foral"
             >
-              <div className=" relative w-[50%] h-full">
+              <div className=" relative hidden lg:block w-[50%] h-full">
                 <Image
                   src={advert}
                   className=" object-cover object-center"
@@ -35,7 +35,7 @@ const NewsModal = () => {
                   alt=""
                 />
               </div>
-              <div className=" w-[50%] p-10 relative ">
+              <div className=" w-full lg:w-[50%] p-10 relative ">
                 <button
                   onClick={() => openModal()}
                   className=" absolute top-5 right-5"
@@ -44,9 +44,11 @@ const NewsModal = () => {
                 </button>
                 <br />
                 <div className=" min-w-full py-6 text-center flex flex-col items-center justify-between h-full">
-                  <h1 className=" text-4xl font-medium leading-loose ">
+                  <h1 className=" text-xl lg:text-4xl font-medium leading-loose ">
                     Love your curls &{" "}
-                    <span className=" font-semibold text-5xl">get 20% OFF</span>
+                    <span className=" font-semibold text-3xl lg:text-5xl">
+                      get 20% OFF
+                    </span>
                   </h1>
 
                   <div className=" min-w-full space-y-6">
@@ -60,7 +62,7 @@ const NewsModal = () => {
                       <p className=" uppercase text-xl font-medium">Sign up</p>
                     </button>
 
-                    <button className=" text-lg text-center">
+                    <button className=" text-base lg:text-lg text-center">
                       No Thank You
                     </button>
                   </div>

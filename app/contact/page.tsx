@@ -5,23 +5,23 @@ const Contact = () => {
     <div className=" w-full min-h-screen pt-[10vh]">
       <div className=" w-full bg-foralwhite py-[90px] ">
         <div className=" w-[90%] mx-auto flex flex-col items-center">
-          <h1 className=" text-[80px] text-center font-melodrama">
+          <h1 className=" text-4xl lg:text-[80px] text-center font-melodrama">
             Contact Us
           </h1>
         </div>
       </div>
-      <div className=" py-[90px] w-[50%] mx-auto">
-        <h1 className=" text-[30px] font-melodrama font-semibold  max-w-[70%]">
+      <div className=" py-[90px] w-[90%] text-center lg:text-left lg:w-[50%] mx-auto">
+        <h1 className=" text-2xl lg:text-[30px] font-melodrama font-semibold max-w-[90%] mx-auto  lg:max-w-[70%] ">
           You may also fill out the form below and we will respond as quickly as
           possible.
         </h1>
-        <div className=" w-[90%] grid grid-cols-2 gap-6 mt-[45px] mb-[90px]">
+        <div className=" w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 mt-[45px] mb-[90px]">
           <input
             className=" w-full text-black h-16 outline-darkslategreen px-4 bg-foralwhite"
             placeholder="Name"
           ></input>
           <textarea
-            className=" w-full h-full bg-foralwhite row-span-3 p-5 "
+            className=" w-full h-full bg-foralwhite lg:row-span-3 p-5 "
             placeholder="Message"
           ></textarea>
           <input
