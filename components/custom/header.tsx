@@ -2,13 +2,26 @@
 
 import React, { useState } from "react";
 import FixedAdvertTop from "./FixedAdvertTop";
-import { MenuIcon, Search, ShoppingBagIcon, User } from "lucide-react";
+import { LogOut, MenuIcon, Search, ShoppingBagIcon, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import sparkle from "@/lib/icons/icons8-sparkle-96.png";
 import { easeIn, motion } from "framer-motion";
 import StyledLink from "./stylelink";
 import { CalendarDays } from "lucide-react";
+import {
+  RegisterLink,
+  LoginLink,
+  LogoutLink,
+} from "@kinde-oss/kinde-auth-nextjs/components";
+
+import {
+    ClerkProvider,
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+  } from '@clerk/nextjs'
 
 import {
   HoverCard,
@@ -110,9 +123,14 @@ const Header = () => {
               transition={{ duration: 0.4, ease: easeIn, delay: 0.4 }}
               className=" flex items-center space-x-5"
             >
-              <button>
-                <User />
-              </button>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
+
+              <SignedOut>
+                <SignInButton />
+              </SignedOut>
+
               <button onClick={() => toggleCartModal()} className=" relative">
                 <div>
                   <ShoppingBagIcon />
