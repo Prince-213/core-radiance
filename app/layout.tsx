@@ -48,7 +48,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-       
+
         <ClerkProvider>
       <SmoothScrolling>
 
@@ -63,7 +63,7 @@ export default async function RootLayout({
               <Header />
             </div>
 
-            <div className=" fixed bottom-0 z-50 w-full">
+            <div className=" fixed bottom-0 z-50 w-full lg:block hidden">
               <RewardBar />
             </div>
 

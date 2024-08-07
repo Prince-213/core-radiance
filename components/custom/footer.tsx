@@ -49,17 +49,17 @@ const Footer = () => {
             Here to Help
           </h1>
           <nav className=" flex flex-col space-y-5">
-            <a href="#" className=" text-base">
+            <a href="/" className=" text-base">
               Home
             </a>
-            <a href="#" className=" text-base">
+            <a href="/my-story" className=" text-base">
               About Us
             </a>
-            <a href="#" className=" text-base">
+            <a href="/asked" className=" text-base">
               Q&A
             </a>
 
-            <a href="#" className=" text-base">
+            <a href="/contact" className=" text-base">
               Contact Us
             </a>
           </nav>
@@ -69,16 +69,16 @@ const Footer = () => {
             Terms & Policies
           </h1>
           <nav className=" flex flex-col space-y-5">
-            <a href="#" className=" text-base">
+            <a href="/refund" className=" text-base">
               Refund Policy
             </a>
-            <a href="#" className=" text-base">
+            <a href="/private" className=" text-base">
               Privacy Policy
             </a>
-            <a href="#" className=" text-base">
+            <a href="/terms" className=" text-base">
               Terms & Service
             </a>
-            <a href="#" className=" text-base">
+            <a href="/shipping" className=" text-base">
               Shipping Policy
             </a>
           </nav>
