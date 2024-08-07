@@ -8,6 +8,7 @@ import shampoo from "@/lib/images/pngwing.com.png";
 import SlideView from "../custom/SlideInView";
 import { color, motion } from "framer-motion";
 import WavyText from "../ace/wavy-text";
+import Link from 'next/link'
 
 const SaloonProducts = () => {
   const [category, setCategory] = useState(0);
@@ -102,7 +103,10 @@ const SaloonProducts = () => {
           </SlideView>
 
           <CoreButton>
+            <Link href="/shop">
             <p className=" uppercase">shop core-radiance</p>
+            </Link>
+
           </CoreButton>
         </div>
       </div>

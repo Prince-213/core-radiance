@@ -9,7 +9,7 @@ import CoreButton from "@/components/custom/corebutton";
 import image1 from "@/lib/images/autumn-goodman-vTL_qy03D1I-unsplash.jpg";
 import image2 from "@/lib/images/coregirls.jpg";
 import image3 from "@/lib/images/elsa-olofsson-Pm0K9Y3EPUc-unsplash.jpg";
-
+import Link from 'next/link'
 import { useScroll } from "framer-motion";
 
 import { easeOut, motion, stagger } from "framer-motion";
@@ -90,7 +90,10 @@ const LandingSection = () => {
               </motion.p>
 
               <CoreButton>
+                <Link href="/shop">
                 <p>SHOP NOW</p>
+                </Link>
+
               </CoreButton>
             </motion.div>
           </div>
@@ -154,9 +157,13 @@ const LandingSection = () => {
                 Welcome to core radiance.
               </motion.p>
 
-              <CoreButton>
-                <p>SHOP NOW</p>
+                    <Link href="/shop">
+                    <CoreButton>
+                    <p>SHOP NOW</p>
               </CoreButton>
+
+                </Link>
+
             </motion.div>
           </div>
           <div className=" w-[30%] h-full bg-[#F3C872] "></div>
@@ -237,9 +244,13 @@ const LandingSection = () => {
                 Welcome to core radiance.
               </motion.p>
               <br />
+
+              <Link href="/shop">
               <button className=" text-white w-[80%] font-bold uppercase text-lg mx-auto bg-[#d53f53] rounded-lg py-4">
-                Shop now
+                     <p>Shop Now</p>
               </button>
+
+                </Link>
             </motion.div>
           </div>
         </div>

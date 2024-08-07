@@ -12,7 +12,7 @@ import image1 from "@/lib/images/shampoo.jpg";
 
 const bestSellers = ["Shampoo", "Conditioners"];
 const bestSeller = ["Cutticle Care Towel", "Hair Rubber Comb"];
-
+import Link from 'next/link'
 export function HoverCardDemo() {
   return (
     <HoverCard>
@@ -35,7 +35,7 @@ export function HoverCardDemo() {
                 {bestSellers.map((item, index) => {
                   return (
                     <div key={index} className=" mb-6 w-fit ">
-                      <StyledLink key={index} href="/">
+                      <StyledLink key={index} href="/shop">
                         <p className=" text-sm">{item}</p>
                       </StyledLink>
                     </div>
@@ -51,7 +51,7 @@ export function HoverCardDemo() {
                 {bestSeller.map((item, index) => {
                   return (
                     <div key={index} className=" mb-6 w-fit ">
-                      <StyledLink key={index} href="/">
+                      <StyledLink key={index} href="/shop">
                         <p className=" text-sm">{item}</p>
                       </StyledLink>
                     </div>
@@ -73,7 +73,10 @@ export function HoverCardDemo() {
                 30% Off Treat & Repair / Use Code: TREAT4U
               </h1> */}
               <CoreButton>
+                <Link href="/shop">
                 <p className=" uppercase text-lg">shop now</p>
+                </Link>
+
               </CoreButton>
             </div>
           </div>

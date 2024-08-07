@@ -6,6 +6,13 @@ import { XCircle } from "lucide-react";
 import Image from "next/image";
 import advert from "@/lib/images/autumn-goodman-vTL_qy03D1I-unsplash.jpg";
 import useStore from "@/store";
+import {
+    ClerkProvider,
+    SignInButton,
+    SignedIn,
+    SignedOut,
+    UserButton
+  } from '@clerk/nextjs'
 
 const NewsModal = () => {
   const { modal, openModal } = useStore();
@@ -59,10 +66,12 @@ const NewsModal = () => {
                     />
 
                     <button className=" min-w-full p-4 rounded-md text-center text-white bg-buttonpink border-none outline-none  ">
+                        <SignInButton >
                       <p className=" uppercase text-xl font-medium">Sign up</p>
+                      </SignInButton>
                     </button>
 
-                    <button className=" text-base lg:text-lg text-center">
+                    <button onClick={() => openModal()}  className=" text-base lg:text-lg text-center">
                       No Thank You
                     </button>
                   </div>

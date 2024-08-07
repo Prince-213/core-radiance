@@ -10,6 +10,7 @@ import { color, motion } from "framer-motion";
 import coreshampoo from "@/lib/images/shampoo.jpg";
 import hairtools from "@/lib/images/hair_care_tools_banner_homeopage_761x.jpg";
 import WavyText from "../ace/wavy-text";
+import Link from 'next/link'
 
 const CategorySection = () => {
   const [category, setCategory] = useState(0);
@@ -53,7 +54,7 @@ const CategorySection = () => {
                 className=" "
                 style={{ objectPosition: "center", objectFit: "cover" }}
               />
-              {/* 
+              {/*
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -191,9 +192,12 @@ const CategorySection = () => {
             </motion.h3>
           </SlideView>
 
-          <CoreButton>
-            <p className=" uppercase">shop core-radiance</p>
-          </CoreButton>
+
+          <Link href="/shop" className=" w-fit bg-buttonpink p-4 rounded-lg text-white uppercase hover:bg-black hover:text-white transition-all duration-150">
+                    <p className=" uppercase">shop core-radiance</p>
+
+                </Link>
+
         </div>
       </div>
 
@@ -274,7 +278,7 @@ const CategorySection = () => {
               {content[category / 100].descp}
             </motion.h3>
           </SlideView>
-          {/* 
+          {/*
           <CoreButton>
             <p className=" uppercase">shop core-radiance</p>
           </CoreButton> */}

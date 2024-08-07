@@ -29,7 +29,7 @@ const Page = () => {
   return (
     <div className=" w-full min-h-screen pb-[90px] pt-[10vh] ">
       <div className=" w-full bg-foralwhite py-[60px] lg:py-[90px]">
-        <div className=" w-[90%] mx-auto flex flex-col items-center">
+        <div className=" w-[90%] mx-auto flex space-y-10 flex-col items-center">
           <h1 className=" text-3xl lg:text-[80px] text-center font-melodrama">
             Shop All
           </h1>

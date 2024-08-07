@@ -36,7 +36,7 @@ const ItemCard = () => {
           Fresh Start Deep Cleansing Shampoo 80z/240ml
         </h1>
         <div className=" flex flex-col items-center">
-          <h1 className=" text-black text-[30px] text-center font-melodrama font-medium">
+          <h1 className=" text-black text-[24px] text-center font-poppins font-medium">
             ₦ 42,800.00 NGN
           </h1>
         </div>
